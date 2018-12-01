@@ -16,15 +16,18 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 ## **A coder :**
 
 
--Périmètre du jeu (espace du carré)
--Score (partie en 5 sous parties)
--Personnages (utilisateurs, comme dans animal crossing)
--Murets avec option collision en cas d’opacité, sans collision en cas de transparence 
+-Murets sans collision en cas de transparence 
 -Objet à récupérer (en cas de croisement entre 2 personnages l’objet revient à l’adversaire)
 -Plusieurs bonus / malus (murs transparents, rapidité, lenteur, autres idées à rajouter)
 -Obstacles (piques qui lorsqu'ils sont touchés par les personnages, ces derniers meurent et une autre sous-partie recommence)
 
 
 
+## **Fait:**
+
+-Murs/Collisions (petit réglage a faire)
+-Mouvement de la balle personnage
+-Design prêt a utilisation 
+-Score fait mais reste encore quelques réglages
 
 Auteurs : Nabil Ynes / Mosbah Yasmin / Marias Maxime .
