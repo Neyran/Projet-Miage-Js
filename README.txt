@@ -27,7 +27,7 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 
 -Murs/Collisions (petit réglage a faire)
 -Mouvement de la balle personnage
--Design prêt a utilisation 
--Score fait mais reste encore quelques réglages
+-Design prêt a utilisation (il ne reste qu'a l'implémenter) 
+-Score en cours
 
 Auteurs : Nabil Ynes / Mosbah Yasmin / Marias Maxime .
