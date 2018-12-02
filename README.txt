@@ -30,4 +30,4 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 -Design prêt a utilisation (il ne reste qu'a l'implémenter) 
 -Score en cours
 
-Auteurs : Nabil Ynes / Mosbah Yasmin / Marias Maxime .
+Auteurs : Nabil Inès / Mosbah Yasmin / Marias Maxime .
