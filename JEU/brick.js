@@ -38,7 +38,7 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-		ctx.save();
+	ctx.save();
         ctx.clip();
         ctx.drawImage(img1, 0, 0, 1900, 900);
         ctx.restore();
@@ -53,7 +53,7 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-		ctx.save();
+	ctx.save();
         ctx.clip();
         ctx.drawImage(img3, 0, 0, 1900, 900);
         ctx.restore();
@@ -69,7 +69,7 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-		ctx.save();
+	ctx.save();
         ctx.clip();
         ctx.drawImage(img4, 0, 0, 1900, 900);
         ctx.restore();
@@ -85,7 +85,7 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-		ctx.save();
+	ctx.save();
         ctx.clip();
         ctx.drawImage(img5, 0, 0, 1900, 900);
         ctx.restore();
