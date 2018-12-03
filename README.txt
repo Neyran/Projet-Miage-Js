@@ -15,7 +15,7 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 
 ## **A coder :**
 
-
+-Ajouter une alerte de fin de jeu
 -Murets sans collision en cas de transparence 
 -Objet à récupérer (en cas de croisement entre 2 personnages l’objet revient à l’adversaire)
 -Plusieurs bonus / malus (murs transparents, rapidité, lenteur, autres idées à rajouter)
