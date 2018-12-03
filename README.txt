@@ -15,7 +15,7 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 
 ## **A coder :**
 
--Murets qui disparait après une collision
+
 -Murets sans collision en cas de transparence 
 -Objet à récupérer (en cas de croisement entre 2 personnages l’objet revient à l’adversaire)
 -Plusieurs bonus / malus (murs transparents, rapidité, lenteur, autres idées à rajouter)
@@ -26,10 +26,12 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 ## **Fait:**
 
 -Murs/Collisions
+-Murets qui disparait après une collision
 -Mouvement de la balle personnage
--Design prêt a utilisation 
--Score en cours
+-Design prêt a utilisation (a refaire)
+-Score
 
 ## **Deux versions du code sont disponibles (nous somme a la recherche de la meilleure manière de gérer les collisions).** 
+La version "Jeu" est la plus avancée
 
 Auteurs : Nabil Inès / Mosbah Yasmin / Marias Maxime .
