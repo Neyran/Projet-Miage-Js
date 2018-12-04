@@ -7,7 +7,7 @@ var score2 = 0;
 let tableauQueue = {};
 let ballRadius = 10;
 let brickRowCount = 50; //Nombre de colonnes
-let brickColumnCount = 7; //nombre de lignes
+let brickColumnCount = 9; //nombre de lignes
 let brickWidth = 38;  //Largeur des bricks
 let brickHeight = 38; //Longueur des bricks
 let brickOffsetTop = 0; // coordonnée de la première brick en Y
@@ -17,19 +17,21 @@ let previousPosY = 0;
 let previousPosX2 = 0;
 let previousPosY2 = 0;
 let bricks = [
-[{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0}],
-[{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 2 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0}],
-[{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}],
-[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}],
+[{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 3 },{status: 3}],
+[{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 2 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 3 },{status: 3}],
+[{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 3 },{status: 3 },{status: 2 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}],
+[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 3 },{status: 3 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}],
 [{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1}],
-[{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}],
-[{status: 3 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 2 },{status: 0 },{status: 0 },{status: 2 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}]
+[{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}],
+[{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 2 },{status: 0 },{status: 0 },{status: 2 },{status: 2 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1}],
+[{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 0 },{status: 2 },{status: 0 },{status: 2 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1}],
+[{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 2 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1}]
 ];
 
 function drawBricks() {
   for(let c=0; c<brickColumnCount; c++) {
     for(let r=0; r<brickRowCount; r++) {
-      if(bricks[c][r].status == 1) {   //mur 1
+      if(bricks[c][r].status == 1) { //mur 1
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -38,13 +40,13 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-	ctx.save();
+		ctx.save();
         ctx.clip();
         ctx.drawImage(img1, 0, 0, 1900, 900);
         ctx.restore();
         ctx.closePath();
       }
-        if(bricks[c][r].status == 2) {    //mur2
+        if(bricks[c][r].status == 2) { //mur 2
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -53,14 +55,14 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-	ctx.save();
+		ctx.save();
         ctx.clip();
         ctx.drawImage(img3, 0, 0, 1900, 900);
         ctx.restore();
         ctx.closePath();
       }
 
-       if(bricks[c][r].status == 3) {     //mur3
+       if(bricks[c][r].status == 3) { //mur 3
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -69,14 +71,14 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-	ctx.save();
+		ctx.save();
         ctx.clip();
         ctx.drawImage(img4, 0, 0, 1900, 900);
         ctx.restore();
         ctx.closePath();
       }
 
-        if(bricks[c][r].status == 4) {    //mur4
+        if(bricks[c][r].status == 4) { // mur 4
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -85,9 +87,25 @@ function drawBricks() {
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
         //ctx.fillStyle = "black";
         ctx.fill();
-	ctx.save();
+		ctx.save();
         ctx.clip();
         ctx.drawImage(img5, 0, 0, 1900, 900);
+        ctx.restore();
+        ctx.closePath();
+      }
+
+        if(bricks[c][r].status == 5) { //mur 5
+        let brickX = (r*(brickWidth))+brickOffsetLeft;
+        let brickY = (c*(brickHeight))+brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        //ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.save();
+        ctx.clip();
+        ctx.drawImage(img6, 0, 0, 1900, 900);
         ctx.restore();
         ctx.closePath();
       }
