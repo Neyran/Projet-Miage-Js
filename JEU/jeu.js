@@ -9,8 +9,9 @@ window.onload = function () {
 	img1 = new Image(); //mur 1
 	img2 = new Image(); //image a modifier
 	img3 = new Image(); //mur 2 
-    img4 = new Image(); //mur3
-    img5 = new Image(); //mur4
+  img4 = new Image(); //mur3
+  img5 = new Image(); //mur4
+  img6 = new Image(); //Mur5 Point de respaw
 
  
   img1.onload = function() {
@@ -21,7 +22,7 @@ window.onload = function () {
 
   img2.onload = function() {
   }
-  img2.src = "https://cdn.shopify.com/s/files/1/1251/6453/products/1AMonster_1024x1024.png?v=1505293561"; //image a modifier
+  img2.src = "https://cdn.shopify.com/s/files/1/1251/6453/products/1AMonster_1024x1024.png?v=1505293561"; //balle
   
 
 
@@ -38,7 +39,10 @@ window.onload = function () {
   }
   img5.src = "https://zupimages.net/up/18/49/k5pa.png"; //mur 5 ancienne zone de point
   
-
+  img6.onload = function() {
+  }
+  img6.src = "https://zupimages.net/up/18/49/k5pa.png"; //mur 6 Zone de respaw
+  
     balle = new Balle(lc/2-15, hc/2);
     balle2 = new Balle(lc/2+15,hc/2);
 
@@ -60,12 +64,12 @@ class Balle {
         ctx.beginPath();
         ctx.arc(this.x,this.y,ballRadius,0,2*Math.PI);
         ctx.stroke();
-		ctx.fill();
-	/*	ctx.save();
+		    ctx.fill();
+		    ctx.save();
         ctx.clip();
-        ctx.drawImage(img2, this.x,this.y, 1900,900); // demander au prof comment mettre une image sur les balles joueurs
-        ctx.restore(); */
+        ctx.drawImage(img2, this.x-10,this.y-10, 20,20);
         ctx.closePath();
+        ctx.restore(); 
     }
 
     left() {
