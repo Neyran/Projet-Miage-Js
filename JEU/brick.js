@@ -29,7 +29,7 @@ let bricks = [
 function drawBricks() {
   for(let c=0; c<brickColumnCount; c++) {
     for(let r=0; r<brickRowCount; r++) {
-      if(bricks[c][r].status == 1) {
+      if(bricks[c][r].status == 1) {   //mur 1
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -44,7 +44,7 @@ function drawBricks() {
         ctx.restore();
         ctx.closePath();
       }
-        if(bricks[c][r].status == 2) {
+        if(bricks[c][r].status == 2) {    //mur2
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -60,7 +60,7 @@ function drawBricks() {
         ctx.closePath();
       }
 
-       if(bricks[c][r].status == 3) {
+       if(bricks[c][r].status == 3) {     //mur3
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -76,7 +76,7 @@ function drawBricks() {
         ctx.closePath();
       }
 
-        if(bricks[c][r].status == 4) {
+        if(bricks[c][r].status == 4) {    //mur4
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
