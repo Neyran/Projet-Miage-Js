@@ -1,11 +1,14 @@
 
+
 function drawScore() {  //demander au prof comment clear sans provoquer d'erreur pour se débarasser de la couleur.
+  ctx.save();
   ctx.font = "20px Arial";
   ctx.fillStyle = "Red";
   ctx.fillText("Joueur1: "+score1, 8, 20);
   ctx.font = "20px Arial";
   ctx.fillStyle = "Green";
   ctx.fillText("Joueur2: "+score2, 150, 20);
+  ctx.restore();
 }
 
 function collisionDetection() {
@@ -70,5 +73,3 @@ function collisionDetection() {
     }
   }
 }
-
-///Créer un 4eme type de mur pour qu'il remplace le mur 3 en cas disparission de celui-ci + refaire tout le design.
