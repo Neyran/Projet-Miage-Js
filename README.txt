@@ -30,6 +30,8 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 -Mouvement de la balle personnage
 -Design prêt a utilisation (a refaire)
 -Score
+-Les collisions  avec le canvas ont été corrigé 
+-Les mouvements du personnages ont été corrigé
 
 ## **Deux versions du code sont disponibles (nous somme a la recherche de la meilleure manière de gérer les collisions).** 
 La version "Jeu" est la plus avancée
