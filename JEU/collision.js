@@ -1,5 +1,4 @@
 
-
 function drawScore() {  //demander au prof comment clear sans provoquer d'erreur pour se débarasser de la couleur.
   ctx.save();
   ctx.font = "20px Arial";
