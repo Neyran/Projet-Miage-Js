@@ -4,8 +4,8 @@ window.onload = function () {
     hc = canvas.height;
     ctx = canvas.getContext("2d");
 
-    document.addEventListener("keydown", checkKey);
-    document.addEventListener("keyup", checkKey);
+    document.addEventListener("keydown", downKeyHandler);
+    document.addEventListener("keyup", upKeyHandler);
 	img1 = new Image(); //mur 1
 	img2 = new Image(); //image a modifier
 	img3 = new Image(); //mur 2 
@@ -57,76 +57,70 @@ class Balle {
         this.y = y;
         this.vx = 10;
         this.vy = 10;
-
     }
 
     draw(ctx) {
+        ctx.save();
         ctx.beginPath();
         ctx.arc(this.x,this.y,ballRadius,0,2*Math.PI);
         ctx.stroke();
 		    ctx.fill();
-		    ctx.save();
         ctx.clip();
         ctx.drawImage(img2, this.x-10,this.y-10, 20,20);
         ctx.closePath();
         ctx.restore(); 
     }
 
-    left() {
-        this.x -= this.vx;
-        this.draw(ctx);
-    }
-
-    right() {
-        this.x += this.vx;
-        this.draw(ctx);
-    }
-     down() {
-        this.y += this.vy;
-        this.draw(ctx);
-    }
-
-    top() {
-        this.y -= this.vy;
-        this.draw(ctx);
+    move(vX, vY){
+      this.x += vX;
+      this.y += vY;
     }
 }
 
+let keyInput = {
+  "ArrowLeft": false,
+  "ArrowRight": false,
+  "ArrowUp": false,
+  "ArrowDown": false
+};
+function downKeyHandler(event){
+  if(keyInput.hasOwnProperty(event.code))
+    keyInput[event.code] = true;
+}
+
+function upKeyHandler(event){
+  if(keyInput.hasOwnProperty(event.code))
+    keyInput[event.code] = false;
+}
+
 // Traitement des inputs (supporte plusieurs touches appuyées)
-function checkKey(e) {
-    e = e || window.event;
+function checkKey(keyInput) {
+
   previousPosX = balle.x;
   previousPosY = balle.y;
   previousPosX2 = balle2.x;
   previousPosY2 = balle2.y;
 
-    tableauQueue[e.keyCode] = e.type == "keydown";
+  let vX = 0, vY = 0;
 
      ///////////////1ER joueur :
 
-    if (tableauQueue["37"]) {
-        if (balle.x - 10> 0) {
-            balle.left();
-        }
-    }
+    if (keyInput.ArrowLeft)
+        vX = -10;    
 
-    if (tableauQueue["39"]) {
-        if (balle.x + 10 < canvas.width) {
-            balle.right();
-          
-        }
-    }
-  if (tableauQueue["38"]) {
-        if (balle.y - 10 > 0) {
-            balle.top();
-        }
-    }
+    if (keyInput.ArrowRight)
+        vX = 10;
+    
+    if (keyInput.ArrowUp)
+        vY = -10;    
 
-    if (tableauQueue["40"]) {
-        if (balle.y + 10 < canvas.height) {
-            balle.down();
-        }
-    }
+    if (keyInput.ArrowDown)
+        vY = 10;
+
+      balle.move(vX, vY);
+
+
+    /*
 
     ///////////////2eme joueur :
      if (tableauQueue["81"]) {
@@ -151,21 +145,20 @@ function checkKey(e) {
         if (balle2.y + 10 < canvas.height) {
             balle2.down();
         }
-    }
+    }*/
 }
 
 
 function dessinerJeu() {
     ctx.clearRect(0, 0, lc, hc);
-    drawBricks();
-    collisionDetection();
+   drawBricks();
+   collisionDetection();
     balle.draw(ctx);
+
+    checkKey(keyInput);
     balle2.draw(ctx);
-	drawScore();
+	 drawScore();
 
 
     requestAnimationFrame(dessinerJeu);
 }
-
-
-dessinerJeu();
