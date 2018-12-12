@@ -46,84 +46,40 @@ let bricks = [
 function drawBricks() {
   for(let c=0; c<brickColumnCount; c++) {
     for(let r=0; r<brickRowCount; r++) {
-      if(bricks[c][r].status == 1) { //mur 1
+        if(bricks[c][r].status == 1 || bricks[c][r].status == 2 || bricks[c][r].status == 3 || bricks[c][r].status == 4 || bricks[c][r].status == 5) {
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        //ctx.fillStyle = "black";
-        ctx.fill();
-		ctx.save();
-        ctx.clip();
-        ctx.drawImage(img1, 0, 0, 1900, 900);
-        ctx.restore();
-        ctx.closePath();
-      }
-        if(bricks[c][r].status == 2) { //mur 2
-        let brickX = (r*(brickWidth))+brickOffsetLeft;
-        let brickY = (c*(brickHeight))+brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        //ctx.fillStyle = "black";
-        ctx.fill();
-		ctx.save();
-        ctx.clip();
-        ctx.drawImage(img3, 0, 0, 1900, 900);
-        ctx.restore();
-        ctx.closePath();
-      }
-
-       if(bricks[c][r].status == 3) { //mur 3
-        let brickX = (r*(brickWidth))+brickOffsetLeft;
-        let brickY = (c*(brickHeight))+brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        //ctx.fillStyle = "black";
-        ctx.fill();
-		ctx.save();
-        ctx.clip();
-        ctx.drawImage(img4, 0, 0, 1900, 900);
-        ctx.restore();
-        ctx.closePath();
-      }
-
-        if(bricks[c][r].status == 4) { // mur 4
-        let brickX = (r*(brickWidth))+brickOffsetLeft;
-        let brickY = (c*(brickHeight))+brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        //ctx.fillStyle = "black";
-        ctx.fill();
-		ctx.save();
-        ctx.clip();
-        ctx.drawImage(img5, 0, 0, 1900, 900);
-        ctx.restore();
-        ctx.closePath();
-      }
-
-        if(bricks[c][r].status == 5) { //mur 5
-        let brickX = (r*(brickWidth))+brickOffsetLeft;
-        let brickY = (c*(brickHeight))+brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        //ctx.fillStyle = "black";
         ctx.fill();
         ctx.save();
         ctx.clip();
-        ctx.drawImage(img6, 0, 0, 1900, 900);
+        switch (bricks[c][r].status) {
+            case 1 :
+                    ctx.drawImage(img1, 0, 0, 1900, 900);
+                    break;
+            case 2 :
+                    ctx.drawImage(img3, 0, 0, 1900, 900);
+                    break;
+            case 3 :
+                    ctx.drawImage(img4, 0, 0, 1900, 900);
+                    break;
+            case 4 :
+                    ctx.drawImage(img5, 0, 0, 1900, 900);
+                    break;
+            case 5 :
+                    ctx.drawImage(img6, 0, 0, 1900, 900);
+                    break;
+            default:
+                    ctx.drawImage(img1, 0, 0, 1900, 900);
+        }
+
         ctx.restore();
         ctx.closePath();
-      }
-    }
+    } 
   }
+ }
 }
+
