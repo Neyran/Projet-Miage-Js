@@ -1,5 +1,5 @@
 
-function drawScore() {  //demander au prof comment clear sans provoquer d'erreur pour se débarasser de la couleur.
+function drawScore() {
   ctx.save();
   ctx.font = "20px Arial";
   ctx.fillStyle = "Red";
@@ -9,6 +9,7 @@ function drawScore() {  //demander au prof comment clear sans provoquer d'erreur
   ctx.fillText("Joueur2: "+score2, 150, 20);
   ctx.restore();
 }
+
 
 function collisionDetection() {
   
@@ -69,6 +70,7 @@ function collisionDetection() {
               b.status = 0;
           }
         }
+        
     }
   }
 }
