@@ -60,22 +60,22 @@ function drawBricks() {
         ctx.clip();
         switch (bricks[c][r].status) {
             case 1 :
-                    ctx.drawImage(img1, 0, 0, 1900, 900);
+                    ctx.drawImage(img1, 0, 0, 1900, 912);
                     break;
             case 2 :
-                    ctx.drawImage(img3, 0, 0, 1900, 900);
+                    ctx.drawImage(img3, 0, 0, 1900, 912);
                     break;
             case 3 :
-                    ctx.drawImage(img4, 0, 0, 1900, 900);
+                    ctx.drawImage(img4, 0, 0, 1900, 912);
                     break;
             case 4 :
-                    ctx.drawImage(img5, 0, 0, 1900, 900);
+                    ctx.drawImage(img5, 0, 0, 1900, 912);
                     break;
             case 5 :
-                    ctx.drawImage(img6, 0, 0, 1900, 900);
+                    ctx.drawImage(img6, 0, 0, 1900, 912);
                     break;
             default:
-                    ctx.drawImage(img1, 0, 0, 1900, 900);
+                    ctx.drawImage(img1, 0, 0, 1900, 912);
         }
 
         ctx.restore();
