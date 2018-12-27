@@ -64,7 +64,7 @@ class Balle {
         ctx.beginPath();
         ctx.arc(this.x,this.y,ballRadius,0,2*Math.PI);
         ctx.stroke();
-		    ctx.fill();
+		ctx.fill();
         ctx.clip();
         ctx.drawImage(img2, this.x-10,this.y-10, 20,20);
         ctx.closePath();
@@ -81,7 +81,11 @@ let keyInput = {
   "ArrowLeft": false,
   "ArrowRight": false,
   "ArrowUp": false,
-  "ArrowDown": false
+  "ArrowDown": false,
+  "KeyA": false,
+  "KeyD": false,
+  "KeyW": false,
+  "KeyS": false
 };
 function downKeyHandler(event){
   if(keyInput.hasOwnProperty(event.code))
@@ -91,6 +95,7 @@ function downKeyHandler(event){
 function upKeyHandler(event){
   if(keyInput.hasOwnProperty(event.code))
     keyInput[event.code] = false;
+  console.log(event);
 }
 
 // Traitement des inputs (supporte plusieurs touches appuyées)
@@ -102,6 +107,8 @@ function checkKey(keyInput) {
   previousPosY2 = balle2.y;
 
   let vX = 0, vY = 0;
+  let vX2 = 0, vY2 = 0;
+
 
      ///////////////1ER joueur :
 
@@ -109,55 +116,39 @@ function checkKey(keyInput) {
         vX = -10;    
 
     if (keyInput.ArrowRight)
-        vX = 10;
-    
+        vX = 10;   
     if (keyInput.ArrowUp)
         vY = -10;    
 
     if (keyInput.ArrowDown)
         vY = 10;
 
+    if (keyInput.KeyA)
+        vX2 = -10;    
+
+    if (keyInput.KeyD)
+        vX2 = 10;   
+    if (keyInput.KeyW)
+        vY2 = -10;    
+
+    if (keyInput.KeyS)
+        vY2 = 10;
+
+      balle2.move(vX2, vY2);
       balle.move(vX, vY);
 
-
-    /*
-
-    ///////////////2eme joueur :
-     if (tableauQueue["81"]) {
-        if (balle2.x - 10> 0) {
-            balle2.left();
-        }
-    }
-
-    if (tableauQueue["68"]) {
-        if (balle2.x + 10 < canvas.width) {
-            balle2.right();
-          
-        }
-    }
-  if (tableauQueue["90"]) {
-        if (balle2.y - 10 > 0) {
-            balle2.top();
-        }
-    }
-
-    if (tableauQueue["83"]) {
-        if (balle2.y + 10 < canvas.height) {
-            balle2.down();
-        }
-    }*/
 }
 
 
 function dessinerJeu() {
     ctx.clearRect(0, 0, lc, hc);
-   drawBricks();
-   collisionDetection();
+    drawBricks();
+    collisionDetection();
     balle.draw(ctx);
+    balle2.draw(ctx);
 
     checkKey(keyInput);
-    balle2.draw(ctx);
-	 drawScore();
+	drawScore();
 
 
     requestAnimationFrame(dessinerJeu);
