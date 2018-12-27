@@ -17,7 +17,6 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 
 -Ajouter une alerte de fin de jeu
 -Murets sans collision en cas de transparence 
--Objet à récupérer (en cas de croisement entre 2 personnages l’objet revient à l’adversaire)
 -Plusieurs bonus / malus (murs transparents, rapidité, lenteur, autres idées à rajouter)
 -Obstacles (piques qui lorsqu'ils sont touchés par les personnages, ces derniers meurent et une autre sous-partie recommence)
 
