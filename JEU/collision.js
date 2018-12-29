@@ -11,6 +11,8 @@ function drawScore() {
 }
 
 
+//collision des balles avec les différents types de murs
+
 function collisionDetection() {
   
   for(var c=0; c<brickColumnCount; c++) {
@@ -37,6 +39,7 @@ function collisionDetection() {
               balle2.x = previousPosX2;
               balle2.y = previousPosY2;
           }
+          
         }
          if (b.status == 3) //mur 3 =  zone de point
       {
@@ -74,3 +77,4 @@ function collisionDetection() {
     }
   }
 }
+
