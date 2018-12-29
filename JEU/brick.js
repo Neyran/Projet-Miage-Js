@@ -4,7 +4,7 @@ let lc;
 let img1;
 var score1 = 0;
 var score2 = 0;
-let tableauQueue = {};
+//let tableauQueue = {};
 let ballRadius = 10;
 let brickRowCount = 52; //Nombre de colonnes
 let brickColumnCount = 26; //nombre de lignes
@@ -16,6 +16,8 @@ let previousPosX = 0;
 let previousPosY = 0;
 let previousPosX2 = 0;
 let previousPosY2 = 0;
+
+//construction de la map :
 let bricks = [
 [{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 }],
 [{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 3 },{status: 3},{status: 1 }],
