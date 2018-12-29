@@ -15,10 +15,9 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 
 ## **A coder :**
 
--Ajouter une alerte de fin de jeu
--Murets sans collision en cas de transparence 
--Plusieurs bonus / malus (murs transparents, rapidité, lenteur, autres idées à rajouter)
--Obstacles (piques qui lorsqu'ils sont touchés par les personnages, ces derniers meurent et une autre sous-partie recommence)
+-Ajouter une alerte de fin de jeu (timer + score)
+- Menu
+- Design a refaire
 
 
 
@@ -31,6 +30,8 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 -Score
 -Les collisions  avec le canvas ont été corrigé 
 -Les mouvements du personnages ont été corrigé
+-Etoile bonus malus(piques qui lorsqu'ils sont touchés par les personnages, ce dernier change de localisation, perds/gagne des poits)
+
 
 ## **Deux versions du code sont disponibles (nous somme a la recherche de la meilleure manière de gérer les collisions).** 
 La version "Jeu" est la plus avancée
