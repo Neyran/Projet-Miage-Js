@@ -4,6 +4,7 @@ window.onload = function () {
     hc = canvas.height;
     ctx = canvas.getContext("2d");
 
+
     document.addEventListener("keydown", downKeyHandler);
     document.addEventListener("keyup", upKeyHandler);
 	img1 = new Image(); //mur 1
@@ -13,7 +14,7 @@ window.onload = function () {
   img5 = new Image(); //mur4
   img6 = new Image(); //Mur5 Point de respaw
 
- 
+
   img1.onload = function() {
   }
   img1.src = "https://www.zupimages.net/up/18/48/5b66.png"; //mur 1
@@ -23,8 +24,6 @@ window.onload = function () {
   img2.onload = function() {
   }
   img2.src = "https://cdn.shopify.com/s/files/1/1251/6453/products/1AMonster_1024x1024.png?v=1505293561"; //balle
-  
-
 
   img3.onload = function() {
   }
@@ -42,14 +41,25 @@ window.onload = function () {
   img6.onload = function() {
   }
   img6.src = "https://zupimages.net/up/18/49/k5pa.png"; //mur 6 Zone de respaw
-  
+
+
+
+    //création des balles
     balle = new Balle(lc/2-15, hc/2);
     balle2 = new Balle(lc/2+15,hc/2);
 
+    //création des étoiles de teleportation 
+  etoiles.push(new Etoile(200, 300, 10, 'green'));
+  etoiles.push(new Etoile(1650, 645, 10, 'black'));
+  etoiles.push(new Etoile(80, 400, 10, 'pink'));
+  etoiles.push(new Etoile(1200, 580, 10, 'orange'));
+  etoiles.push(new Etoile(1110, 820, 10, 'blue'));
+  etoiles.push(new Etoile(200, 800, 10, 'red'));
 
     requestAnimationFrame(dessinerJeu);
 };
 
+//On construit les balles
 class Balle {
     constructor(x, y) {
         // on définit les propriétés qu'on veut avoir à la construction
@@ -89,12 +99,12 @@ let keyInput = {
 };
 function downKeyHandler(event){
   if(keyInput.hasOwnProperty(event.code))
-    keyInput[event.code] = true;
+  keyInput[event.code] = true;
 }
 
 function upKeyHandler(event){
   if(keyInput.hasOwnProperty(event.code))
-    keyInput[event.code] = false;
+  keyInput[event.code] = false;
   console.log(event);
 }
 
@@ -105,32 +115,25 @@ function checkKey(keyInput) {
   previousPosY = balle.y;
   previousPosX2 = balle2.x;
   previousPosY2 = balle2.y;
-
   let vX = 0, vY = 0;
   let vX2 = 0, vY2 = 0;
-
-
-     ///////////////1ER joueur :
+     ///////////1ER joueur :
 
     if (keyInput.ArrowLeft)
         vX = -10;    
-
     if (keyInput.ArrowRight)
         vX = 10;   
     if (keyInput.ArrowUp)
         vY = -10;    
-
     if (keyInput.ArrowDown)
         vY = 10;
-
+     ///////////2EM joueur :
     if (keyInput.KeyA)
         vX2 = -10;    
-
     if (keyInput.KeyD)
         vX2 = 10;   
     if (keyInput.KeyW)
         vY2 = -10;    
-
     if (keyInput.KeyS)
         vY2 = 10;
 
@@ -144,12 +147,14 @@ function dessinerJeu() {
     ctx.clearRect(0, 0, lc, hc);
     drawBricks();
     collisionDetection();
+    ///collisionEtoile();
     balle.draw(ctx);
     balle2.draw(ctx);
-
+    etoiles.forEach((e) => {
+    e.update();
+    e.draw(ctx);
+    })
     checkKey(keyInput);
-	drawScore();
-
-
+	  drawScore();
     requestAnimationFrame(dessinerJeu);
 }
