@@ -15,14 +15,16 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 
 ## **A coder :**
 
--Ajouter une alerte de fin de jeu (timer + score)
-- Menu
+- Bouton Start a refaire
+- Perfectionner le Menu
 - Design a refaire
+- Son
 
 
 
 ## **Fait:**
 
+- Timer
 -Murs/Collisions
 -Murets qui disparait après une collision
 -Mouvement de la balle personnage
