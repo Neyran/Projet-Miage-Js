@@ -18,8 +18,6 @@ window.onload = function () {
   img1.onload = function() {
   }
   img1.src = "https://www.zupimages.net/up/18/48/5b66.png"; //mur 1
-  
-
 
   img2.onload = function() {
   }
@@ -95,7 +93,8 @@ let keyInput = {
   "KeyA": false,
   "KeyD": false,
   "KeyW": false,
-  "KeyS": false
+  "KeyS": false,
+  "Space":false
 };
 function downKeyHandler(event){
   if(keyInput.hasOwnProperty(event.code))
@@ -137,17 +136,48 @@ function checkKey(keyInput) {
     if (keyInput.KeyS)
         vY2 = 10;
 
+    ////PLAY
+   /* if(keyInput.Space){
+           startCount();
+           
+    }*/
+
+
       balle2.move(vX2, vY2);
       balle.move(vX, vY);
 
 }
 
+function timedCount() { //comptage
+  c = c + 1;
+  t = setTimeout(timedCount, 1000);
+
+  if(c==120) {
+    play=0;
+    c=0;
+  }
+
+
+}
+
+function startCount() { //commence le timer
+  if (!timer_is_on) {
+    timer_is_on = 1;
+    timedCount();
+    play=1;
+  }
+}
+
+function stopCount() { //stop le timer
+  clearTimeout(t);
+  timer_is_on = 0;
+  play=0;
+}
 
 function dessinerJeu() {
     ctx.clearRect(0, 0, lc, hc);
     drawBricks();
     collisionDetection();
-    ///collisionEtoile();
     balle.draw(ctx);
     balle2.draw(ctx);
     etoiles.forEach((e) => {
@@ -156,5 +186,6 @@ function dessinerJeu() {
     })
     checkKey(keyInput);
 	  drawScore();
+    drawMenu()
     requestAnimationFrame(dessinerJeu);
 }
