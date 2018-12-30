@@ -16,6 +16,10 @@ let previousPosX = 0;
 let previousPosY = 0;
 let previousPosX2 = 0;
 let previousPosY2 = 0;
+var c = 0;
+let play = 0;
+var t;
+var timer_is_on = 0;
 
 //construction de la map :
 let bricks = [
