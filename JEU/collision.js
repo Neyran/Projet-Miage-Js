@@ -1,15 +1,45 @@
+function drawMenu() {
+  if(play==0) {
+ctx.save();
+ctx.fillStyle = "Black";
+ctx.fillRect(0,0,1900,1000);
+ctx.font = "50px Arial";
+  ctx.fillStyle = "Red";
+
+  if(score1>score2) { 
+      ctx.fillText("FIN DU JEU! BRAVO AU JOUEUR 1", 500, 200);
+    stopCount()
+  }
+  if(score1<score2) {
+      ctx.fillText("FIN DU JEU! BRAVO AU JOUEUR 2", 500, 200);
+     stopCount()
+  }
+
+  if(score1 == score2) {
+      ctx.fillText("FIN DU JEU! EGALITE !", 500, 200);
+     stopCount()
+  }
+
+
+  }
+}
+
 
 function drawScore() {
   ctx.save();
+    ctx.fillStyle = "white";
+   ctx.fillRect(0, 0, 450, 30);
   ctx.font = "20px Arial";
   ctx.fillStyle = "Red";
   ctx.fillText("Joueur1: "+score1, 8, 20);
   ctx.font = "20px Arial";
   ctx.fillStyle = "Green";
   ctx.fillText("Joueur2: "+score2, 150, 20);
+  ctx.font = "20px Arial";
+  ctx.fillStyle = "Blue";
+  ctx.fillText("Temps écoulé: "+c, 300, 20);
   ctx.restore();
 }
-
 
 //collision des balles avec les différents types de murs
 
@@ -77,4 +107,3 @@ function collisionDetection() {
     }
   }
 }
-
