@@ -48,14 +48,18 @@ window.onload = function () {
     balle2 = new Balle(lc/2+15,hc/2);
 
     //création des étoiles de teleportation 
-  etoiles.push(new Etoile(1000, 250, 10, '#8A2BE2')); // violetbleu
-  etoiles.push(new Etoile(840, 350, 10, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(1650, 670, 10, '#FF6347')); //rouge
-  etoiles.push(new Etoile(550, 550, 10, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(80, 400, 10, '#F08080')); //light corail
-  etoiles.push(new Etoile(1200, 580, 10, '#D8BFD8')); //sandybrown
-  etoiles.push(new Etoile(1110, 820, 10, '#87CEEB'));
-  etoiles.push(new Etoile(200, 800, 10, '#FF6347'));
+  etoiles.push(new Etoile(1000, 250, 15, '#8A2BE2')); // violetbleu
+  etoiles.push(new Etoile(850, 860, 15, '#8A2BE2')); // violetbleu
+  etoiles.push(new Etoile(1650, 220, 15, '#8A2BE2')); // violetbleu
+  etoiles.push(new Etoile(840, 350, 15, '#F08080')); //lightcorail
+  etoiles.push(new Etoile(1650, 670, 15, '#8A2BE2')); //violetbleu
+  etoiles.push(new Etoile(550, 550, 15, '#F08080')); //lightcorail
+  etoiles.push(new Etoile(1850, 600, 15, '#F08080')); //lightcorail
+  etoiles.push(new Etoile(60, 400, 15, '#F08080')); //light corail
+  etoiles.push(new Etoile(1200, 580, 15, '#87CEEB')); //bleu clair
+  etoiles.push(new Etoile(1110, 810, 15, '#87CEEB')); // bleu clair
+  etoiles.push(new Etoile(850, 130, 15, '#87CEEB')); // bleu clair
+  etoiles.push(new Etoile(200, 800, 15, '#87CEEB')); // bleu clair
 
   //bigStar.push(new Etoile(1040, 125, 20, 'yellow')); // en haut milieu
   bigStar.push(new Etoile(1150, 615, 20, 'yellow'));
@@ -65,9 +69,9 @@ window.onload = function () {
   bigStar.push(new Etoile(200, 300, 20, 'yellow')); // en haut à gauche
   bigStar.push(new Etoile(600, 600, 20, 'yellow')); 
 
-  randometoile.push(new Etoile(400, 850, 10, 'blue'));
-  randometoile.push(new Etoile(1590, 400, 10, 'blue'));
-  randometoile.push(new Etoile(200, 800, 10, 'blue'));
+  randometoile.push(new Etoile(400, 830, 15, 'blue'));
+  randometoile.push(new Etoile(1590, 400, 15, 'blue'));
+  randometoile.push(new Etoile(1400, 800, 15, 'blue'));
 
 
 
