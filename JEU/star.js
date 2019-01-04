@@ -129,7 +129,7 @@ update() {
             balle2.y = hc/2;
             this.size =20;
             this.color = 'yellow'; //change la couleur de l'étoile touchée
-            balle2.ballRadius = 30;
+            balle2.rad *=1.5;
 
           }
           if((collball && collball2 && collball3 && collball4)){
