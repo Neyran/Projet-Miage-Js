@@ -54,6 +54,7 @@ window.onload = function () {
   etoiles.push(new Etoile(840, 350, 15, '#F08080')); //lightcorail
   etoiles.push(new Etoile(1650, 670, 15, '#8A2BE2')); //violetbleu
   etoiles.push(new Etoile(200, 150, 15, '#8A2BE2')); //violetbleu
+  etoiles.push(new Etoile(200, 600, 15, '#8A2BE2')); //violetbleu
   etoiles.push(new Etoile(550, 550, 15, '#F08080')); //lightcorail
   etoiles.push(new Etoile(1850, 600, 15, '#F08080')); //lightcorail
   etoiles.push(new Etoile(60, 400, 15, '#F08080')); //light corail
