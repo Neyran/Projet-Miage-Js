@@ -47,39 +47,40 @@ window.onload = function () {
     balle2 = new Balle(lc/2+15,hc/2);
 
     //création des étoiles de teleportation 
-  etoiles.push(new Etoile(200, 300, 10, 'green'));
+  etoiles.push(new Etoile(200, 300, 10, 'green')); 
+  etoiles.push(new Etoile(200, 300, 10, 'pink')); 
   etoiles.push(new Etoile(1650, 645, 10, 'black'));
   etoiles.push(new Etoile(80, 400, 10, 'pink'));
   etoiles.push(new Etoile(1200, 580, 10, 'orange'));
   etoiles.push(new Etoile(1110, 820, 10, 'blue'));
   etoiles.push(new Etoile(200, 800, 10, 'red'));
   randometoile.push(new Etoile(200, 800, 10, 'blue'));
-  randometoile.push(new Etoile(400, 800, 10, 'red'));
+  randometoile.push(new Etoile(400, 800, 10, 'blue'));
   randometoile.push(new Etoile(200, 800, 10, 'blue'));
-
   bigstar.push(new Etoile(1000, 800, 10, 'yellow'));
-
+                        //x,y,taille,couleur
     requestAnimationFrame(dessinerJeu);
 };
 
 //On construit les balles
 class Balle {
-    constructor(x, y) {
+    constructor(x, y,rad) {
         // on définit les propriétés qu'on veut avoir à la construction
         this.x = x;
         this.y = y;
         this.vx = 10;
         this.vy = 10;
+        this.rad = ballRadius;
     }
 
     draw(ctx) {
         ctx.save();
         ctx.beginPath();
-        ctx.arc(this.x,this.y,ballRadius,0,2*Math.PI);
+        ctx.arc(this.x,this.y,this.rad ,0,2*Math.PI);
         ctx.stroke();
 		ctx.fill();
         ctx.clip();
-        ctx.drawImage(img2, this.x-10,this.y-10, 20,20);
+        ctx.drawImage(img2, this.x-this.rad ,this.y-this.rad , this.rad*2,this.rad*2);
         ctx.closePath();
         ctx.restore(); 
     }
