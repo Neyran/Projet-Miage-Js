@@ -61,7 +61,6 @@ window.onload = function () {
   etoiles.push(new Etoile(850, 130, 15, '#87CEEB')); // bleu clair
   etoiles.push(new Etoile(200, 800, 15, '#87CEEB')); // bleu clair
 
-//randometoile.push(new Etoile(200, 500, 15, 'blue'));
   bigstar.push(new Etoile(1040, 125, 25, 'yellow')); // en haut milieu
   bigstar.push(new Etoile(1150, 615, 25, 'yellow'));
   bigstar.push(new Etoile(1600, 845, 25, 'yellow')); //en bas à droite
@@ -74,7 +73,7 @@ window.onload = function () {
 
   randometoile.push(new Etoile(400, 830, 15, 'blue'));
   randometoile.push(new Etoile(1590, 400, 15, 'blue'));
-  randometoile.push(new Etoile(1400, 800, 15, 'blue'));
+  randometoile.push(new Etoile(700, 320, 15, 'blue'));
 
 
 
