@@ -1,4 +1,4 @@
-//On construit les étoiles de teleportation
+//On construit les étoiles
 let etoiles = [];
 let randometoile = [];
 let bigstar = [];
@@ -68,7 +68,6 @@ update() {
 
              for(var t=0; t<randometoile.length;t++) {
                var et = randometoile[t];
-                  console.log(randometoile.length);
                    switch (et.color) {
                          case 'black' :
                          et.color = 'yellow';
@@ -81,12 +80,14 @@ update() {
                     }
                   }
 
+                  //Spécialisation de l'étoile bigStar
+
                   for(var y=0 ; y<bigstar.length; y++) {
                     var testetoile = bigstar[y];
                     testetoile.size = 20;
                     testetoile.vx = (Math.random()*2 - 1) ;
                     testetoile.vy = (Math.random()*2 - 1) ;
-                                  if (b.status == 1 || b.status == 2 ) {
+              if (b.status == 1 || b.status == 2 ) {
                 if (collisionLeft3 && collisionRight3 && collisionTop3 && collisionBottom3){
                  
                    this.vx *= -1;
@@ -130,6 +131,9 @@ update() {
             this.size =20;
             this.color = 'yellow'; //change la couleur de l'étoile touchée
             balle2.rad *=1.5;
+            vit = 2;
+            console.log(vit);
+
 
           }
           if((collball && collball2 && collball3 && collball4)){
