@@ -1,5 +1,7 @@
 //On construit les étoiles de teleportation
 let etoiles = [];
+let randometoile = [];
+let bigstar = [];
 class Etoile { 
   
 //Le constructeur initialise les variables
@@ -55,6 +57,7 @@ update() {
 
               if (b.status == 1 || b.status == 2 ) {
                 if (collisionLeft3 && collisionRight3 && collisionTop3 && collisionBottom3){
+                 
                    this.vx *= -1;
                    this.vy *= -1;
                 }
@@ -62,6 +65,29 @@ update() {
 
         }
     }
+
+             for(var t=0; t<randometoile.length;t++) {
+               var et = randometoile[t];
+                  console.log(randometoile.length);
+                   switch (et.color) {
+                         case 'black' :
+                         et.color = 'yellow';
+                         break;
+                         case 'yellow' :
+                         et.color = 'red';
+                         break;
+                         default:        
+                         et.color = 'black';
+                    }
+                  }
+
+                  for(var y=0 ; y<bigstar.length; y++) {
+                    var testetoile = bigstar[y];
+                    testetoile.size = 20;
+                    testetoile.vx = (Math.random()*2 - 1) ;
+                    testetoile.vy = (Math.random()*2 - 1) ;
+                  }
+
 
     //collision balle et balle2
     var collA = ballRadius*2 +1;
@@ -94,6 +120,7 @@ update() {
           if(collball02 && collball22 && collball23 && collball24) {
             balle2.x = lc/2+15; //changer les localisations en fonctions de couleurs
             balle2.y = hc/2;
+            this.size =20;
             this.color = 'yellow'; //change la couleur de l'étoile touchée
 
           }
@@ -131,5 +158,3 @@ setColor(color) {
 this.color = color;
 }
 }
-
-
