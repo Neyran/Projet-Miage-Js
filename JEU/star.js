@@ -86,6 +86,13 @@ update() {
                     testetoile.size = 20;
                     testetoile.vx = (Math.random()*2 - 1) ;
                     testetoile.vy = (Math.random()*2 - 1) ;
+                                  if (b.status == 1 || b.status == 2 ) {
+                if (collisionLeft3 && collisionRight3 && collisionTop3 && collisionBottom3){
+                 
+                   this.vx *= -1;
+                   this.vy *= -1;
+                }
+              }
                   }
 
 
@@ -114,7 +121,7 @@ update() {
 
 
 
-//Nouvelle localisation de la balle en fonction de la couleur de l'étoile qu'elle touche
+    //Nouvelle localisation de la balle en fonction de la couleur de l'étoile qu'elle touche
     switch (this.color) {
         case 'black' :
           if(collball02 && collball22 && collball23 && collball24) {
@@ -122,6 +129,7 @@ update() {
             balle2.y = hc/2;
             this.size =20;
             this.color = 'yellow'; //change la couleur de l'étoile touchée
+            balle2.ballRadius = 30;
 
           }
           if((collball && collball2 && collball3 && collball4)){
