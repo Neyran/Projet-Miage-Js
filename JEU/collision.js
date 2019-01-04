@@ -1,44 +1,51 @@
+
 function drawMenu() {
-  if(play==0) {
+if(play==2) {
+ctx.save();
+ctx.fillStyle = "grey";
+ctx.fillRect(0,0,1900,1000);
+ctx.font = "100px Trebuchet MS";
+ctx.fillStyle = "pink";
+ctx.fillText("menu", 185, 200);
+ctx.restore();
+}
+if(play==0) {
 ctx.save();
 ctx.fillStyle = "Black";
 ctx.fillRect(0,0,1900,1000);
 ctx.font = "100px Trebuchet MS";
-  ctx.fillStyle = "Grey";
-  
-  if(score1>score2) { 
-      ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 1", 185, 200);
-    stopCount()
-  }
-  if(score1<score2) {
-      ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 2", 185, 200);
-     stopCount()
-  }
+ctx.fillStyle = "Grey";
+    if(score1>score2) { 
+        ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 1", 185, 200);
+      stopCount()
+    }
+    if(score1<score2) {
+        ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 2", 185, 200);
+       stopCount()
+    }
 
-  if(score1 == score2) {
-      ctx.fillText("FIN DU JEU ! EGALITE !", 450, 200);
-     stopCount()
-  }
-
-
+    if(score1 == score2) {
+        ctx.fillText("FIN DU JEU ! EGALITE !", 450, 200);
+       stopCount()
+    }
+    ctx.restore();
   }
 }
 
 
 function drawScore() {
   ctx.save();
-    ctx.fillStyle = "white";
-   ctx.fillRect(0, 0, 570, 40);
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, 570, 40);
   ctx.font = "30px Trebuchet";
   ctx.fillStyle = "Red";
-  ctx.fillText("Joueur 1 : "+score1, 5, 25);
+  ctx.fillText("Joueur 1 :"+score1, 5, 25);
   ctx.font = "30px Trebuchet";
   ctx.fillStyle = "Blue";
-  ctx.fillText("Joueur 2 : "+score2, 170, 25);
+  ctx.fillText("Joueur 2 :"+score2, 170, 25);
   ctx.font = "30px Trebuchet";
   ctx.fillStyle = "Black";
-  let d = (brickColumnCount-c+brickRowCount+13+28); // variable qui compte le temps restant aux joueurs
-  ctx.fillText("Temps restant : "+d, 330, 25); //au lieu de temps écoulé
+  ctx.fillText("Temps restant : "+c+ "s", 330, 25); //au lieu de temps écoulé
   ctx.restore();
 }
 
