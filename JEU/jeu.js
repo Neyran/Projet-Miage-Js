@@ -53,6 +53,11 @@ window.onload = function () {
   etoiles.push(new Etoile(1200, 580, 10, 'orange'));
   etoiles.push(new Etoile(1110, 820, 10, 'blue'));
   etoiles.push(new Etoile(200, 800, 10, 'red'));
+  randometoile.push(new Etoile(200, 800, 10, 'blue'));
+  randometoile.push(new Etoile(400, 800, 10, 'red'));
+  randometoile.push(new Etoile(200, 800, 10, 'blue'));
+
+  bigstar.push(new Etoile(1000, 800, 10, 'yellow'));
 
     requestAnimationFrame(dessinerJeu);
 };
@@ -174,16 +179,30 @@ function stopCount() { //stop le timer
   play=0;
 }
 
+function star() {
+      etoiles.forEach((e) => {
+    e.update();
+    e.draw(ctx);
+    })
+
+   randometoile.forEach((u) => {
+    u.update();
+    u.draw(ctx);
+    })
+
+    bigstar.forEach((t) => {
+    t.update();
+    t.draw(ctx);
+    })
+}
+
 function dessinerJeu() {
     ctx.clearRect(0, 0, lc, hc);
     drawBricks();
     collisionDetection();
     balle.draw(ctx);
     balle2.draw(ctx);
-    etoiles.forEach((e) => {
-    e.update();
-    e.draw(ctx);
-    })
+    star();
     checkKey(keyInput);
 	  drawScore();
     drawMenu()
