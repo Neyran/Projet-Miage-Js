@@ -61,13 +61,16 @@ window.onload = function () {
   etoiles.push(new Etoile(850, 130, 15, '#87CEEB')); // bleu clair
   etoiles.push(new Etoile(200, 800, 15, '#87CEEB')); // bleu clair
 
-  //bigStar.push(new Etoile(1040, 125, 20, 'yellow')); // en haut milieu
-  bigStar.push(new Etoile(1150, 615, 20, 'yellow'));
-  bigStar.push(new Etoile(1600, 845, 20, 'yellow')); //en bas à droite
-  bigStar.push(new Etoile(58, 590, 20, 'yellow')); //tout à gauche milieu
-  bigStar.push(new Etoile(1650, 90, 20, 'yellow'));// en haut à droite
-  bigStar.push(new Etoile(200, 300, 20, 'yellow')); // en haut à gauche
-  bigStar.push(new Etoile(600, 600, 20, 'yellow')); 
+//randometoile.push(new Etoile(200, 500, 15, 'blue'));
+  bigstar.push(new Etoile(1040, 125, 25, 'yellow')); // en haut milieu
+  bigstar.push(new Etoile(1150, 615, 25, 'yellow'));
+  bigstar.push(new Etoile(1600, 845, 25, 'yellow')); //en bas à droite
+  bigstar.push(new Etoile(58, 590, 25, 'yellow')); //tout à gauche milieu
+  bigstar.push(new Etoile(1650, 90, 25, 'yellow'));// en haut à droite
+  bigstar.push(new Etoile(200, 300, 25, 'yellow')); // en haut à gauche
+  bigstar.push(new Etoile(600, 600, 25, 'yellow')); // milieu vers gauche
+  bigstar.push(new Etoile(770, 865, 25, 'yellow')); //en bas au mileu
+  //bigstar.push(new Etoile(1850, 455, 25, 'yellow')); // droite milieu
 
   randometoile.push(new Etoile(400, 830, 15, 'blue'));
   randometoile.push(new Etoile(1590, 400, 15, 'blue'));
