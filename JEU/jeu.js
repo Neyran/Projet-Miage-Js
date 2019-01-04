@@ -10,9 +10,9 @@ window.onload = function () {
 	img1 = new Image(); //mur 1
 	img2 = new Image(); //image a modifier
 	img3 = new Image(); //mur 2 
-  img4 = new Image(); //mur3
-  img5 = new Image(); //mur4
-  img6 = new Image(); //Mur5 Point de respaw
+    img4 = new Image(); //mur3
+    img5 = new Image(); //mur4
+    img6 = new Image(); //Mur5 Point de respaw
 
 
   img1.onload = function() {
@@ -39,6 +39,7 @@ window.onload = function () {
   img6.onload = function() {
   }
   img6.src = "https://zupimages.net/up/18/49/k5pa.png"; //mur 6 Zone de respaw
+
 
 
 
@@ -134,19 +135,21 @@ function checkKey(keyInput) {
         vY = 10;
      ///////////2EM joueur :
     if (keyInput.KeyA)
-        vX2 = -10;    
+        vX2 = -vit;    
     if (keyInput.KeyD)
-        vX2 = 10;   
+        vX2 = vit;   
     if (keyInput.KeyW)
-        vY2 = -10;    
+        vY2 = -vit;    
     if (keyInput.KeyS)
-        vY2 = 10;
+        vY2 = vit;
+    console.log(vit);
 
     ////PLAY
-   /* if(keyInput.Space){
-           startCount();
+   if(keyInput.Space){
+      startCount();
+      play=1;
            
-    }*/
+    }
 
 
       balle2.move(vX2, vY2);
@@ -155,10 +158,9 @@ function checkKey(keyInput) {
 }
 
 function timedCount() { //comptage
-  c = c + 1;
+  c = c - 1;
   t = setTimeout(timedCount, 1000);
-
-  if(c==120) {
+if(c==0) {
     play=0;
     c=0;
   }
@@ -181,7 +183,7 @@ function stopCount() { //stop le timer
 }
 
 function star() {
-      etoiles.forEach((e) => {
+    etoiles.forEach((e) => {
     e.update();
     e.draw(ctx);
     })
@@ -205,7 +207,7 @@ function dessinerJeu() {
     balle2.draw(ctx);
     star();
     checkKey(keyInput);
-	  drawScore();
+	drawScore();
     drawMenu()
     requestAnimationFrame(dessinerJeu);
 }
