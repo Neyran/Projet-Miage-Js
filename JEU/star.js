@@ -68,15 +68,18 @@ update() {
 
              for(var t=0; t<randometoile.length;t++) {
                var et = randometoile[t];
+                  console.log(randometoile.length);
                    switch (et.color) {
-                         case 'black' :
-                         et.color = 'yellow';
+                         case 'white' :
+                         et.color = '#FFA500'; //orange
                          break;
-                         case 'yellow' :
-                         et.color = 'red';
+                         case '#FFA500' :
+                         et.color = '#FF0000'; // rouge
                          break;
+                         case '#FF0000' :
+                         et.color = '#FFDAB9'; // beige
                          default:        
-                         et.color = 'black';
+                         et.color = 'white';
                     }
                   }
 
@@ -124,12 +127,12 @@ update() {
 
     //Nouvelle localisation de la balle en fonction de la couleur de l'étoile qu'elle touche
     switch (this.color) {
-        case 'black' :
+        case 'white' :
           if(collball02 && collball22 && collball23 && collball24) {
             balle2.x = lc/2+15; //changer les localisations en fonctions de couleurs
             balle2.y = hc/2;
             this.size =20;
-            this.color = 'yellow'; //change la couleur de l'étoile touchée
+            this.color ='#FFDAB9'; //change la couleur de l'étoile touchée ici beige
             balle2.rad *=1.5;
             vit = 2;
             console.log(vit);
@@ -139,7 +142,7 @@ update() {
           if((collball && collball2 && collball3 && collball4)){
           balle.x = lc/2+15;
           balle.y = hc/2;
-          this.color = 'yellow';
+          this.color = '#FFDAB9'; // beige
           }
         break;
         default:        
