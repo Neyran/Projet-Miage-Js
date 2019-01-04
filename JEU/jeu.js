@@ -146,9 +146,10 @@ function checkKey(keyInput) {
 
     ////PLAY
    if(keyInput.Space){
+   	if(play==2){
       startCount();
       play=1;
-           
+      }     
     }
 
 
