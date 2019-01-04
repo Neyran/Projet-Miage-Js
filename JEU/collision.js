@@ -36,7 +36,7 @@ ctx.fillStyle = "Grey";
 function drawScore() {
   ctx.save();
   ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, 570, 40);
+  ctx.fillRect(0, 0, 580, 40);
   ctx.font = "30px Trebuchet";
   ctx.fillStyle = "Red";
   ctx.fillText("Joueur 1 :"+score1, 5, 25);
