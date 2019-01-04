@@ -48,31 +48,29 @@ window.onload = function () {
     balle2 = new Balle(lc/2+15,hc/2);
 
     //création des étoiles de teleportation 
-etoiles.push(new Etoile(1000, 250, 15, '#8A2BE2')); // violetbleu
-  etoiles.push(new Etoile(850, 860, 15, '#8A2BE2')); // violetbleu
-  etoiles.push(new Etoile(1650, 220, 15, '#8A2BE2')); // violetbleu
-  etoiles.push(new Etoile(840, 350, 15, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(1650, 670, 15, '#8A2BE2')); //violetbleu
-  etoiles.push(new Etoile(550, 550, 15, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(1850, 600, 15, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(80, 400, 15, '#F08080')); //light corail
-  etoiles.push(new Etoile(1200, 580, 15, '#87CEEB')); //bleu clair
-  etoiles.push(new Etoile(1110, 820, 15, '#87CEEB')); // bleu clair
-  etoiles.push(new Etoile(850, 130, 15, '#87CEEB')); // bleu clair
-  etoiles.push(new Etoile(200, 800, 15, '#FF6347'));
-  randometoile.push(new Etoile(400, 830, 15, 'blue'));
-  randometoile.push(new Etoile(1590, 400, 15, 'blue'));
-  randometoile.push(new Etoile(1400, 800, 15, 'blue'));
-  //randometoile.push(new Etoile(200, 500, 15, 'blue'));
-  bigstar.push(new Etoile(1040, 125, 25, 'yellow')); // en haut milieu
-  bigstar.push(new Etoile(1150, 615, 25, 'yellow'));
-  bigstar.push(new Etoile(1600, 845, 25, 'yellow')); //en bas à droite
-  bigstar.push(new Etoile(58, 590, 25, 'yellow')); //tout à gauche milieu
-  bigstar.push(new Etoile(1650, 90, 25, 'yellow'));// en haut à droite
-  bigstar.push(new Etoile(200, 300, 25, 'yellow')); // en haut à gauche
-  bigstar.push(new Etoile(600, 600, 25, 'yellow')); // milieu vers gauche
-  bigstar.push(new Etoile(770, 865, 25, 'yellow')); //en bas au mileu
-  bigstar.push(new Etoile(1850, 455, 25, 'yellow')); // droite milieu
+  etoiles.push(new Etoile(1000, 250, 10, '#8A2BE2')); // violetbleu
+  etoiles.push(new Etoile(840, 350, 10, '#F08080')); //lightcorail
+  etoiles.push(new Etoile(1650, 670, 10, '#FF6347')); //rouge
+  etoiles.push(new Etoile(550, 550, 10, '#F08080')); //lightcorail
+  etoiles.push(new Etoile(80, 400, 10, '#F08080')); //light corail
+  etoiles.push(new Etoile(1200, 580, 10, '#D8BFD8')); //sandybrown
+  etoiles.push(new Etoile(1110, 820, 10, '#87CEEB'));
+  etoiles.push(new Etoile(200, 800, 10, '#FF6347'));
+
+  //bigStar.push(new Etoile(1040, 125, 20, 'yellow')); // en haut milieu
+  bigStar.push(new Etoile(1150, 615, 20, 'yellow'));
+  bigStar.push(new Etoile(1600, 845, 20, 'yellow')); //en bas à droite
+  bigStar.push(new Etoile(58, 590, 20, 'yellow')); //tout à gauche milieu
+  bigStar.push(new Etoile(1650, 90, 20, 'yellow'));// en haut à droite
+  bigStar.push(new Etoile(200, 300, 20, 'yellow')); // en haut à gauche
+  bigStar.push(new Etoile(600, 600, 20, 'yellow')); 
+
+  randometoile.push(new Etoile(400, 850, 10, 'blue'));
+  randometoile.push(new Etoile(1590, 400, 10, 'blue'));
+  randometoile.push(new Etoile(200, 800, 10, 'blue'));
+
+
+
                         //x,y,taille,couleur
     requestAnimationFrame(dessinerJeu);
 };
@@ -208,7 +206,7 @@ function star() {
     u.draw(ctx);
     })
 
-    bigstar.forEach((t) => {
+    bigStar.forEach((t) => {
     t.update();
     t.draw(ctx);
     })
