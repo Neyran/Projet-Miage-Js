@@ -4,15 +4,15 @@ window.onload = function () {
     hc = canvas.height;
     ctx = canvas.getContext("2d");
 
-
     document.addEventListener("keydown", downKeyHandler);
     document.addEventListener("keyup", upKeyHandler);
-	img1 = new Image(); //mur 1
-	img2 = new Image(); //image a modifier
-	img3 = new Image(); //mur 2 
+	  img1 = new Image(); //mur 1
+	  img2 = new Image(); //image a modifier
+	  img3 = new Image(); //mur 2 
     img4 = new Image(); //mur3
     img5 = new Image(); //mur4
     img6 = new Image(); //Mur5 Point de respaw
+    img7 = new Image();
 
 
   img1.onload = function() {
@@ -27,7 +27,6 @@ window.onload = function () {
   }
   img3.src = "https://zupimages.net/up/18/49/izvu.png"; //mur 2 
 
-
   img4.onload = function() {
   }
   img4.src = "https://zupimages.net/up/18/49/0khj.png"; //mur 4
@@ -41,41 +40,50 @@ window.onload = function () {
   img6.src = "https://zupimages.net/up/18/49/k5pa.png"; //mur 6 Zone de respaw
 
 
+ //création des balles
+ balle = new Balle(lc/2+15, hc/2);
+ balle2 = new Balle(lc/2-15,hc/2);
 
+  //création des étoiles de teleportation + Etoiles bonus
+  etoiles.push(new Etoile(1000, 250, 10, 'violet')); // violetbleu
+  bigStar.push(new Etoile(1045, 52, 20, 'yellow')); 
+  teleStar.push(new Etoile(790, 247, 10, 'white')); //teleportation
+  //teleStar.push(new Etoile(1100, 200, 10, '#F5F5DC'));
+   // teleStar.push(new Etoile(1650, 290, 10, '#F5F5DC'));
 
-    //création des balles
-    balle = new Balle(lc/2-15, hc/2);
-    balle2 = new Balle(lc/2+15,hc/2);
+  etoiles.push(new Etoile(1652, 150, 10, 'violet')); // violetbleu
+  bigStar.push(new Etoile(1652, 15, 20, 'yellow')); 
+  teleStar.push(new Etoile(1512, 55, 10, 'orange')); //teleportation
 
-    //création des étoiles de teleportation 
-  etoiles.push(new Etoile(1000, 250, 15, '#8A2BE2')); // violetbleu
-  etoiles.push(new Etoile(850, 860, 15, '#8A2BE2')); // violetbleu
-  etoiles.push(new Etoile(1650, 220, 15, '#8A2BE2')); // violetbleu
-  etoiles.push(new Etoile(840, 350, 15, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(1650, 670, 15, '#8A2BE2')); //violetbleu
-  etoiles.push(new Etoile(200, 150, 15, '#8A2BE2')); //violetbleu
-  etoiles.push(new Etoile(200, 600, 15, '#8A2BE2')); //violetbleu
-  etoiles.push(new Etoile(550, 550, 15, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(1850, 600, 15, '#F08080')); //lightcorail
-  etoiles.push(new Etoile(60, 400, 15, '#F08080')); //light corail
-  etoiles.push(new Etoile(1200, 580, 15, '#87CEEB')); //bleu clair
-  etoiles.push(new Etoile(1110, 810, 15, '#87CEEB')); // bleu clair
-  etoiles.push(new Etoile(850, 130, 15, '#87CEEB')); // bleu clair
-  etoiles.push(new Etoile(200, 800, 15, '#87CEEB')); // bleu clair
+  etoiles.push(new Etoile(1842, 760, 10, 'violet'));
+  bigStar.push(new Etoile(1842, 855, 20, 'yellow'));
 
-  bigstar.push(new Etoile(1040, 125, 25, 'yellow')); // en haut milieu
-  bigstar.push(new Etoile(1150, 615, 25, 'yellow'));
-  bigstar.push(new Etoile(1600, 845, 25, 'yellow')); //en bas à droite
-  bigstar.push(new Etoile(58, 590, 25, 'yellow')); //tout à gauche milieu
-  bigstar.push(new Etoile(1650, 90, 25, 'yellow'));// en haut à droite
-  bigstar.push(new Etoile(200, 300, 25, 'yellow')); // en haut à gauche
-  bigstar.push(new Etoile(600, 600, 25, 'yellow')); // milieu vers gauche
-  bigstar.push(new Etoile(770, 865, 25, 'yellow')); //en bas au mileu
-  //bigstar.push(new Etoile(1850, 455, 25, 'yellow')); // droite milieu
+  etoiles.push(new Etoile(322, 743, 10, 'violet'));
+  bigStar.push(new Etoile(322, 663, 20, 'yellow'));
 
-  randometoile.push(new Etoile(400, 830, 15, 'blue'));
-  randometoile.push(new Etoile(1590, 400, 15, 'blue'));
-  randometoile.push(new Etoile(700, 320, 15, 'blue'));
+  bigStar.push(new Etoile(93, 93, 20, 'yellow'));
+  etoiles.push(new Etoile(150, 123, 10, 'violet'));
+
+ //etoiles malus en fonction de la couleurs
+  etoiles.push(new Etoile(840, 350, 10, 'green')); //lightcorail
+  etoiles.push(new Etoile(1650, 670, 10, 'green')); //rouge
+  etoiles.push(new Etoile(550, 550, 10, 'pink')); //lightcorail
+  etoiles.push(new Etoile(80, 400, 10, 'red')); //light corail
+  etoiles.push(new Etoile(1200, 580, 10, 'red')); //sandybrown
+  etoiles.push(new Etoile(1110, 820, 10, 'grey'));
+  etoiles.push(new Etoile(200, 800, 10, 'pink'));  
+  etoiles.push(new Etoile(550, 550, 10, 'black')); //lightcorail
+  etoiles.push(new Etoile(80, 400, 10, 'grey')); //light corail
+  etoiles.push(new Etoile(1200, 580, 10, 'pink')); //sandybrown
+  etoiles.push(new Etoile(1110, 820, 10, 'black'));
+  etoiles.push(new Etoile(200, 800, 10, 'black'));
+
+//Bonus ou malus en fonciton de la couleur
+  randometoile.push(new Etoile(710, 850, 10, 'red'));
+  randometoile.push(new Etoile(193, 293, 10, 'red'));
+  randometoile.push(new Etoile(1590, 400, 10, 'red'));
+  randometoile.push(new Etoile(1500, 800, 10, 'red'));  
+
 
 
 
@@ -146,23 +154,22 @@ function checkKey(keyInput) {
      ///////////1ER joueur :
 
     if (keyInput.ArrowLeft)
-        vX = -10;    
+        vX = -vit1;    
     if (keyInput.ArrowRight)
-        vX = 10;   
+        vX = vit1;   
     if (keyInput.ArrowUp)
-        vY = -10;    
+        vY = -vit1;    
     if (keyInput.ArrowDown)
-        vY = 10;
+        vY = vit1;
      ///////////2EM joueur :
     if (keyInput.KeyA)
-        vX2 = -vit;    
+        vX2 = -vit2;    
     if (keyInput.KeyD)
-        vX2 = vit;   
+        vX2 = vit2;   
     if (keyInput.KeyW)
-        vY2 = -vit;    
+        vY2 = -vit2;    
     if (keyInput.KeyS)
-        vY2 = vit;
-    console.log(vit);
+        vY2 = vit2;
 
     ////PLAY
    if(keyInput.Space){
@@ -208,7 +215,6 @@ function star() {
     e.update();
     e.draw(ctx);
     })
-
    randometoile.forEach((u) => {
     u.update();
     u.draw(ctx);
@@ -218,6 +224,11 @@ function star() {
     t.update();
     t.draw(ctx);
     })
+    teleStar.forEach((t) => {
+    t.update();
+    t.draw(ctx);
+    })
+
 }
 
 function dessinerJeu() {
