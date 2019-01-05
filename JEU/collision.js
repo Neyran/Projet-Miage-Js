@@ -2,11 +2,11 @@
 function drawMenu() {
 if(play==2) {
 ctx.save();
-ctx.fillStyle = "grey";
+ctx.fillStyle = "Black";
 ctx.fillRect(0,0,1900,1000);
 ctx.font = "100px Trebuchet MS";
-ctx.fillStyle = "pink";
-ctx.fillText("menu", 185, 200);
+ctx.fillStyle = "red";
+ctx.fillText("Press space to start", 185, 200);
 ctx.restore();
 }
 if(play==0) {
@@ -36,7 +36,7 @@ ctx.fillStyle = "Grey";
 function drawScore() {
   ctx.save();
   ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, 580, 40);
+  ctx.fillRect(0, 0, 570, 40);
   ctx.font = "30px Trebuchet";
   ctx.fillStyle = "Red";
   ctx.fillText("Joueur 1 :"+score1, 5, 25);
