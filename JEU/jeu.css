@@ -1,27 +1,10 @@
 #myCanvas {
-	    display: block;
+        display: block;
         margin: 50px auto;
         outline : 1px solid black;
-        background-image: url(https://www.zupimages.net/up/18/47/p50d.png?fbclid=IwAR1ZX_CWhDauJQlwsT5PCC7Rzpwo0YGVkTcTQQbpIvbBA8TKASuZwSQZM1o)
+        background-image: url(https://www.zupimages.net/up/18/47/p50d.png?fbclid=IwAR1ZX_CWhDauJQlwsT5PCC7Rzpwo0YGVkTcTQQbpIvbBA8TKASuZwSQZM1o);
 }
 
-.start {
-	position: absolute;
-    margin-top: 600px;
-    margin-left: 700px;
-    height: 100px;
-    width: 600px;
-    font-size: 50px;
-    border-radius: 10px;
-    background-color: grey;
-    font-family: serif;
-}
-
-b { 
- color : black;
- font-family: "Trebuchet MS", Impact;
-}
-
-.start:focus { /*a changer*/ 
-	opacity : 0;
+body {
+    background-image: url(https://i.gifer.com/WBVk.gif);
 }
