@@ -142,11 +142,13 @@ update() {
           if(collball02 && collball22 && collball23 && collball24) { 
             balle2.x = 500; 
             balle2.y = 500;
+            mySound.play();
 
           }
           if((collball && collball2 && collball3 && collball4)){ 
           balle.x = 500;
           balle.y = 500;
+          mySound.play();
           }
           break;
        case 'yellow' :
@@ -155,12 +157,14 @@ update() {
             score2 +=2;
             this.x = 0;
             this.y = 0;
+            mySound.play();
           }
           if((collball && collball2 && collball3 && collball4)){
             this.size=0;
             score1 +=2;
             this.x = 0;
             this.y = 0;
+            mySound.play();
           }
            break;
          case 'green' :
@@ -169,12 +173,14 @@ update() {
             this.y = 0;
             this.size=0;
             vit2+= 4;
+            mySound.play();
           }
           if((collball && collball2 && collball3 && collball4)){
           vit1 += 4;
             this.x = 0;
             this.y = 0;
             this.size=0;
+            mySound.play();
 
           }
           break;
@@ -184,12 +190,14 @@ update() {
             this.y = 0;
             this.size=0;
             vit2 -= 4;
+            mySound.play();
           }
           if((collball && collball2 && collball3 && collball4)){
           vit1 -= 4;
             this.x = 0;
             this.y = 0;
             this.size=0;
+            mySound.play();
 
           }
           break;
@@ -199,12 +207,14 @@ update() {
             this.y = 0;
             this.size=0;
             score2 =0;
+            mySound.play();
           }
           if((collball && collball2 && collball3 && collball4)){
             this.x = 0;
             this.y = 0;
             this.size=0;
             score1 =0;
+            mySound.play();
 
           }
           break;
@@ -214,6 +224,7 @@ update() {
             this.x = 0;
             this.y = 0;
             this.size=0;
+            mySound.play();
            
           }
           if((collball && collball2 && collball3 && collball4)){
@@ -221,6 +232,7 @@ update() {
             this.x = 0;
             this.y = 0;
             this.size=0;
+            mySound.play();
            
           }
           break;
@@ -231,6 +243,7 @@ update() {
             this.x = 0;
             this.y = 0;
             this.size=0;
+            mySound.play();
           
           }
           if((collball && collball2 && collball3 && collball4)){
@@ -238,6 +251,7 @@ update() {
             this.x = 0;
             this.y = 0;
             this.size=0;
+            mySound.play();
            
           }
           break;
@@ -245,10 +259,12 @@ update() {
           if(collball02 && collball22 && collball23 && collball24) {
             balle2.x = 1100; //changer les localisations en fonctions de couleurs
             balle2.y = 200;
+            mySound.play();
           }
           if((collball && collball2 && collball3 && collball4)){
           balle.x = 1100;
           balle.y = 200;
+          mySound.play();
 
           }
           break;
@@ -256,10 +272,12 @@ update() {
           if(collball02 && collball22 && collball23 && collball24) {
             balle2.x = 1650; //changer les localisations en fonctions de couleurs
             balle2.y = 290;
+            mySound.play();
           }
           if((collball && collball2 && collball3 && collball4)){
           balle.x = 1650;
           balle.y = 290;
+          mySound.play();
 
           }
           break;
@@ -267,11 +285,13 @@ update() {
           if(collball02 && collball22 && collball23 && collball24) {
             balle2.x = lc/2+15;
             balle2.y = hc/2;
+            mySound.play();
 
           }
           if((collball && collball2 && collball3 && collball4)){
           balle.x = lc/2-15;
           balle.y = hc/2;
+          mySound.play();
           }
           break;
     }
