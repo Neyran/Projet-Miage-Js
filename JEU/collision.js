@@ -1,13 +1,12 @@
 
-
 function drawMenu() {
 if(play==2) {
 ctx.save();
 ctx.fillStyle = "Black";
 ctx.fillRect(0,0,1900,1000);
 ctx.font = "100px Trebuchet MS";
-ctx.fillStyle = "red";
-ctx.fillText("Press space to start", 185, 200);
+ctx.fillStyle = "Red";
+ctx.fillText("PRESS [SPACE] TO START", 450, 400);
 ctx.restore();
 }
 if(play==0) {
@@ -37,7 +36,7 @@ ctx.fillStyle = "Grey";
 function drawScore() {
   ctx.save();
   ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, 570, 40);
+  ctx.fillRect(0, 0, 570, 30);
   ctx.font = "30px Trebuchet";
   ctx.fillStyle = "Red";
   ctx.fillText("Joueur 1 :"+score1, 5, 25);
@@ -46,7 +45,7 @@ function drawScore() {
   ctx.fillText("Joueur 2 :"+score2, 170, 25);
   ctx.font = "30px Trebuchet";
   ctx.fillStyle = "Black";
-  ctx.fillText("Temps restant : "+c+ "s", 330, 25); //au lieu de temps écoulé
+  ctx.fillText("Temps restant : "+c+ "s", 320, 25); //au lieu de temps écoulé
   ctx.restore();
 }
 
