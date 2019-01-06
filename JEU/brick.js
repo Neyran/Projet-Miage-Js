@@ -21,7 +21,6 @@ let t;
 let timer_is_on = 0;
 let vit1 = 10;
 let vit2 =10;
-let mySound;
 
 
 //construction de la map :
