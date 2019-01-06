@@ -190,10 +190,12 @@ update() {
             this.y = 0;
             this.size=0;
             vit2 -= 4;
+            //vit2 = vit2/2
             mySound4.play();
           }
           if((collball && collball2 && collball3 && collball4)){
           vit1 -= 4;
+           //vit1 = vit2/2
             this.x = 0;
             this.y = 0;
             this.size=0;
