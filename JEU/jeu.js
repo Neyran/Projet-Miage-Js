@@ -3,6 +3,9 @@ window.onload = function () {
     lc = canvas.width;
     hc = canvas.height;
     ctx = canvas.getContext("2d");
+    video = document.getElementById('sourcevid');
+      mySound = new sound("https://www.sound-fishing.net/download.php?id=1169.mp3");
+
 
     document.addEventListener("keydown", downKeyHandler);
     document.addEventListener("keyup", upKeyHandler);
@@ -12,8 +15,10 @@ window.onload = function () {
     img4 = new Image(); //mur3
     img5 = new Image(); //mur4
     img6 = new Image(); //Mur5 Point de respaw
-    img7 = new Image();
 
+/////////////////////
+
+////////////////////
 
   img1.onload = function() {
   }
@@ -229,6 +234,20 @@ function star() {
     t.draw(ctx);
     })
 
+}
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
 }
 
 function dessinerJeu() {
