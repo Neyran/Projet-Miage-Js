@@ -1,4 +1,4 @@
-et canvas, ctx, balle;
+let canvas, ctx, balle;
 let hc;
 let lc;
 let img1,img2,img3,img4,img5,img6;
@@ -21,6 +21,7 @@ let t;
 let timer_is_on = 0;
 let vit1 = 10;
 let vit2 =10;
+let mySound;
 
 
 //construction de la map :
