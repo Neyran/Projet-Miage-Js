@@ -4,9 +4,15 @@ window.onload = function () {
     hc = canvas.height;
     ctx = canvas.getContext("2d");
     video = document.getElementById('sourcevid');
-      mySound = new sound("https://www.sound-fishing.net/download.php?id=1169.mp3");
+      mySound = new sound("https://lasonotheque.org/UPLOAD/mp3/0564.mp3");
+     mySound2 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/RewardSo-Mark_E_B-8078/RewardSo-Mark_E_B-8078_hifi.mp3");
+      mySound3 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/PowerUp-Mark_E_B-8070/PowerUp-Mark_E_B-8070_hifi.mp3");
+mySound4 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/SpaceShi-Mark_E_B-7845/SpaceShi-Mark_E_B-7845_hifi.mp3");
+mySound5 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/SineySpa-Mark_E_B-7844/SineySpa-Mark_E_B-7844_hifi.mp3");
+mySound6 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/ToySpace-Mark_E_B-7846/ToySpace-Mark_E_B-7846_hifi.mp3");
+mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/Arcade_S-wwwbeat-8530/Arcade_S-wwwbeat-8530_hifi.mp3");
 
-
+      mySound8 = new sound("https://ia801309.us.archive.org/34/items/auboutdufil-archives/497/Jaunter-Reset.mp3");
     document.addEventListener("keydown", downKeyHandler);
     document.addEventListener("keyup", upKeyHandler);
 	  img1 = new Image(); //mur 1
@@ -180,6 +186,7 @@ function checkKey(keyInput) {
    if(keyInput.Space){
    	if(play==2){
       startCount();
+      mySound6.play();
       play=1;
       }     
     }
@@ -259,6 +266,7 @@ function dessinerJeu() {
     star();
     checkKey(keyInput);
 	drawScore();
-    drawMenu()
+    drawMenu();
+    mySound8.play();
     requestAnimationFrame(dessinerJeu);
 }
