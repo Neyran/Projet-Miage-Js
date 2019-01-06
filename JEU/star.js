@@ -157,14 +157,14 @@ update() {
             score2 +=2;
             this.x = 0;
             this.y = 0;
-            mySound.play();
+            mySound2.play();
           }
           if((collball && collball2 && collball3 && collball4)){
             this.size=0;
             score1 +=2;
             this.x = 0;
             this.y = 0;
-            mySound.play();
+            mySound2.play();
           }
            break;
          case 'green' :
@@ -173,14 +173,14 @@ update() {
             this.y = 0;
             this.size=0;
             vit2+= 4;
-            mySound.play();
+            mySound4.play();
           }
           if((collball && collball2 && collball3 && collball4)){
           vit1 += 4;
             this.x = 0;
             this.y = 0;
             this.size=0;
-            mySound.play();
+            mySound4.play();
 
           }
           break;
@@ -190,14 +190,14 @@ update() {
             this.y = 0;
             this.size=0;
             vit2 -= 4;
-            mySound.play();
+            mySound4.play();
           }
           if((collball && collball2 && collball3 && collball4)){
           vit1 -= 4;
             this.x = 0;
             this.y = 0;
             this.size=0;
-            mySound.play();
+            mySound4.play();
 
           }
           break;
@@ -207,14 +207,14 @@ update() {
             this.y = 0;
             this.size=0;
             score2 =0;
-            mySound.play();
+            mySound5.play();
           }
           if((collball && collball2 && collball3 && collball4)){
             this.x = 0;
             this.y = 0;
             this.size=0;
             score1 =0;
-            mySound.play();
+            mySound5.play();
 
           }
           break;
@@ -224,34 +224,34 @@ update() {
             this.x = 0;
             this.y = 0;
             this.size=0;
-            mySound.play();
+            mySound3.play();
            
           }
           if((collball && collball2 && collball3 && collball4)){
-            balle.rad *=5;
+            balle.rad =5;
             this.x = 0;
             this.y = 0;
             this.size=0;
-            mySound.play();
+            mySound3.play();
            
           }
           break;
 
           case 'grey' :
           if(collball02 && collball22 && collball23 && collball24) {
-            balle2.rad *=1.5; 
+            balle2.rad =15; 
             this.x = 0;
             this.y = 0;
             this.size=0;
-            mySound.play();
+            mySound3.play();
           
           }
           if((collball && collball2 && collball3 && collball4)){
-            balle.rad *=1.5;
+            balle.rad =15;
             this.x = 0;
             this.y = 0;
             this.size=0;
-            mySound.play();
+            mySound3.play();
            
           }
           break;
