@@ -1,4 +1,5 @@
 
+
 function drawMenu() {
 if(play==2) {
 ctx.save();
@@ -86,11 +87,13 @@ function collisionDetection() {
           {
           score1++;
           b.status = 4;
+          mySound2.play();
           }
           if (collisionLeft2 && collisionRight2 && collisionTop2 && collisionBottom2) //collision balle 2
           {
           score2++;
           b.status = 4;
+          mySound2.play();
           }
         }
         if (b.status == 2) //mur 2 = mur qui disparait
@@ -102,6 +105,7 @@ function collisionDetection() {
               balle.x = previousPosX;
               balle.y = previousPosY;
               b.status = 0;
+              mySound7.play();
           }
           if (collisionLeft2 && collisionRight2 && collisionTop2 && collisionBottom2) //collision balle 2
           {
@@ -109,6 +113,7 @@ function collisionDetection() {
               balle2.x = previousPosX2;
               balle2.y = previousPosY2;
               b.status = 0;
+              mySound7.play();
           }
         }
         
