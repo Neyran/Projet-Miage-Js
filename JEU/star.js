@@ -30,9 +30,7 @@ ctx.translate(this.x, this.y);
 ctx.rotate(this.rotation);
 ctx.fillStyle = this.color;
 ctx.fillRect(-this.size/2, -this.size/2, this.size, this.size);
-
 ctx.restore();
-
 // Dessine la 2ème partie de l'étoile
 ctx.save ();
 
@@ -63,17 +61,40 @@ update() {
              
              //Collision étoile avec mur 1 et 2
 
-              var collisionLeft3   = this.x + this.size/2>= b.x;
-              var collisionRight3  = b.x + brickWidth >= this.x - this.size/2;
-              var collisionTop3    = this.y + this.size/2>= b.y;
-              var collisionBottom3 = b.y + brickHeight >= this.y - this.size/2;
+              var collisionLeft3   = this.x + this.size/2> b.x;
+              var collisionRight3  = (b.x + brickWidth) > (this.x - this.size/2);
+              var collisionTop3    = this.y + this.size/2 > b.y;
+              var collisionBottom3 = b.y + brickHeight > this.y - this.size/2;
 
               if (b.status == 1 || b.status == 2 ) {
+
                 if (collisionLeft3 && collisionRight3 && collisionTop3 && collisionBottom3){
-                 
                    this.vx *= -1;
                    this.vy *= -1;
-                }
+/*
+                if(collisionLeft3) {
+  this.x = b.x - this.size/2;
+  this.vx *= -1;
+}
+/*
+if(collisionRight3) {
+  this.x = b.x + brickWidth + this.size/2;
+  this.vx *= -1;
+}
+*/
+/*
+if(collisionTop3) {
+  this.y = b.y - this.size/2;
+  this.vy *= -1;
+}
+
+if(collisionBottom3) {
+  this.y = b.y+ brickHeight + this.size/2 ;
+  this.vy *= -1;
+}
+*/
+              }
+
               }
 
         }
@@ -110,14 +131,14 @@ update() {
 
              //Spécialisation de l'étoile bigStar
                   for(var f=0 ; f<teleStar.length; f++) {
-                    console.log(teleStar.length);
+                 //   console.log(teleStar.length);
                     var teletoile = teleStar[f];
                     teletoile.vx = 0;
                     teletoile.vy = 0;
                   }
 
             for(var y=0 ; y<bigStar.length; y++) {
-                    console.log(bigStar.length);
+                   // console.log(bigStar.length);
                     var testetoile = bigStar[y];
                     testetoile.vx = 0;
                     testetoile.vy = 0;
