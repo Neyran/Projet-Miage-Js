@@ -40,13 +40,17 @@ div {
     margin-left: auto;
     margin-right: auto;
     outline : 1px solid white;
+        font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .link {
-    height: 900px;
-    width: 1900px;
-    font-size: 4em;
-    text-transform: uppercase;
-    font-weight: 700;
+    color: #6b3850;
+}
+
+
+.link2 {
+	margin-top: 640px;
     color: #b2b0a9;
 }
