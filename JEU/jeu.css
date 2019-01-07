@@ -14,10 +14,7 @@ p {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
-.imgback {
-     position: absolute;
-    text-align: center;
-}
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -33,7 +30,7 @@ p {
 }
 
 
-div {
+.imgback {
     background: #10111c url(https://cdn-images-1.medium.com/max/2000/1*KrfOi7vg-5Dz-hGifK8ynA.gif) no-repeat center center;
     height: 912px;
     width: 1900px;
@@ -43,6 +40,8 @@ div {
         font-size: 4em;
     text-transform: uppercase;
     font-weight: 700;
+         position: absolute;
+    text-align: center;
 }
 
 .link {
@@ -53,4 +52,19 @@ div {
 .link2 {
 	margin-top: 640px;
     color: #b2b0a9;
+}
+
+.imgback2 {
+    background: #10111c url(https://cdn-images-1.medium.com/max/2000/1*KrfOi7vg-5Dz-hGifK8ynA.gif) no-repeat center center;
+    height: 912px;
+    width: 1900px;
+    margin-left: auto;
+    margin-right: auto;
+    outline : 1px solid white;
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    display: none;
 }
