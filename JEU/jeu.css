@@ -1,4 +1,6 @@
 #myCanvas {
+height : 95%;
+width : 95%;
 display: block;
     outline: 1px solid black;
     background-image: url(https://zupimages.net/up/19/02/8zwv.png) ;
@@ -10,6 +12,7 @@ body {
     height: 912px;
     width: 1900px;
     margin: 100px auto;
+    zoom : 0.7;
 }
 
 p {
