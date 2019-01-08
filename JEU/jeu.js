@@ -102,6 +102,13 @@ mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Elect
     requestAnimationFrame(dessinerJeu);
 };
 
+          function addShadows() {
+            ctx.shadowColor = "black";    // color
+            ctx.shadowBlur = 15;         // blur level
+            ctx.shadowOffsetX = 2;      // horizontal offset
+            ctx.shadowOffsetY = 2;      // vertical offset
+          }
+
 //On construit les balles
 class Balle {
     constructor(x, y,rad) {
@@ -117,6 +124,7 @@ class Balle {
         ctx.save();
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.rad ,0,2*Math.PI);
+         addShadows();
         ctx.stroke();
 		    ctx.fill();
         ctx.clip();
@@ -263,6 +271,7 @@ function sound(src) {
 
 function dessinerJeu() {
     ctx.clearRect(0, 0, lc, hc);
+    drawShad();
     drawBricks();
     collisionDetection();
     balle.draw(ctx);
