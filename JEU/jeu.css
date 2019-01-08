@@ -1,7 +1,7 @@
 #myCanvas {
 display: block;
     outline: 1px solid black;
-    background-image: url(https://www.zupimages.net/up/18/47/p50d.png?fbclid=IwAR1ZX_CWhDauJQlwsT5PCC7Rzpwo0YGVkTcTQQbpIvbBA8TKASuZwSQZM1o);
+    background-image: url(https://zupimages.net/up/19/02/8zwv.png);
 }
 
 body {
@@ -50,11 +50,27 @@ p {
 }
 
 
-.link2 {
+.link5,imgback2 p {
 	margin-top: 640px;
     color: #b2b0a9;
 }
 
+.link2{
+display: none;
+	margin-top: 640px;
+    color: #b2b0a9;
+
+}
+.link3{
+display: none;
+	margin-top: 640px;
+    color: #b2b0a9;
+}
+.link4{
+display: none;
+	margin-top: 640px;
+    color: #b2b0a9;
+}
 .imgback2 {
     background: #10111c url(https://cdn-images-1.medium.com/max/2000/1*KrfOi7vg-5Dz-hGifK8ynA.gif) no-repeat center center;
     height: 912px;
@@ -69,3 +85,4 @@ p {
     text-align: center;
     display: none;
 }
+
