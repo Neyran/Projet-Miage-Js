@@ -14,20 +14,24 @@ ctx.fillStyle = "Black";
 ctx.fillRect(0,0,1900,1000);
 ctx.font = "100px Trebuchet MS";
 ctx.fillStyle = "Grey";
+*/
 if(score1>score2) { 
-      ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 1", 185, 200);
+  document.querySelector('.link2').style= 'display:block;'
+      //ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 1", 185, 200);
       stopCount()
 }
 if(score1<score2) {
-      ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 2", 185, 200);
+   document.querySelector('.link3').style= 'display:block;'
+      //ctx.fillText("FIN DU JEU ! BRAVO AU JOUEUR 2", 185, 200);
       stopCount()
 }
 
 if(score1 == score2) {
-      ctx.fillText("FIN DU JEU ! EGALITE !", 450, 200);
+   document.querySelector('.link4').style= 'display:block;'
+     // ctx.fillText("FIN DU JEU ! EGALITE !", 450, 200);
       stopCount()
 }
-      ctx.restore();*/
+      //ctx.restore();*/
 
       document.querySelector('.imgback2').style= 'display:block;'
 }
