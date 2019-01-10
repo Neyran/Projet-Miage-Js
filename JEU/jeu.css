@@ -114,8 +114,9 @@ font-size: 30px;
 
 }
 .regle{
-
-color: #ff0000;;
+font-size: 50px;
+font-family: "Comic Sans MS", cursive, sans-serif;
+color: #DD5794;;
 }
 .skip{
 color: #b2b0a9;
@@ -135,11 +136,21 @@ color: #b2b0a9;
 }
 
 
-.rouge2{
-    animation: rouge2 0.5s infinite;
+.Rule{
+	font-size: 35px;
+    animation: rouge2 2s infinite;
 }
 @keyframes rouge2 { 
 0%   { color:yellow; }
+25% { color: red; }
+50% {color: cyan;}
+75% {color:lightgreen;}
 100% { color:pink; } 
+}
+.Vibro{
+	  animation: rouge 0.7s infinite;
+	  font-style: italic;
+	  position: relative;
+color: #DB1C74;
 }
 
