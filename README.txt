@@ -14,20 +14,19 @@ Nous avons changé de projet en cours de route et nous sommes partis sur un jeu 
 
 - Timer
 -Murs/Collisions
--Murets qui disparait après une collision
+-Murets qui disparaissent suite à une collision
 -Mouvement de la balle personnage
--Design prêt a utilisation (a refaire)
--Score
--Les collisions  avec le canvas ont été corrigé 
--Les mouvements du personnages ont été corrigé
--Etoile bonus malus(piques qui lorsqu'ils sont touchés par les personnages, ce dernier change de localisation, perds/gagne des poits)
+-Design prêt à utilisation 
+- Gestion du score
+-Les collisions avec le canvas ont été corrigé 
+-La fluidité des mouvements du personnages a été corrigé
+-Etoile bonus/malus(piques qui lorsqu'ils sont touchés par les personnages, ce dernier change de localisation, perds/gagne des points)
 - Perfectionner le Menu
-- Design a refaire
-- Son
+- Mise en place du son
 - Menu explicatif des touches
--Hebergement sur le site d'un ami qui a bien voulu nous aider -> http://www.samuelcavaco.fr/JEU/jeu.html
+- Hebergement sur le site d'un ami qui a bien voulu nous aider -> http://www.samuelcavaco.fr/JEU/jeu.html
 
-## **Deux versions du code sont disponibles (nous somme a la recherche de la meilleure manière de gérer les collisions).** 
+La version du code à consulter :
 La version "Jeu" est la plus avancée
 
 Auteurs : Nabil Inès / Mosbah Yasmin / Marias Maxime .
