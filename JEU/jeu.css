@@ -1,92 +1,121 @@
 #myCanvas {
 height : 95%;
 width : 95%;
+margin: auto;
 display: block;
-    outline: 1px solid black;
-    background-image: url(https://zupimages.net/up/19/02/8zwv.png) ;
-        box-shadow: 0px 0px 20px #481611;
+outline: 1px solid black;
+background-image: url(https://zupimages.net/up/19/02/8zwv.png) ;
+box-shadow: 0px 0px 20px #481611;
 }
 
 body {
-    background-image: url(https://i.gifer.com/WBVk.gif);
-    height: 912px;
-    width: 1900px;
-    margin: 100px auto;
-    zoom : 0.7;
+background-image: url(https://i.gifer.com/WBVk.gif);
+height: 912px;
+width: 1900px;
+margin: 100px auto;
+zoom : 0.7;
 }
 
 p {
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
+animation: shake 0.5s;
+animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 
 .imgback {
-    background: #10111c url(https://cdn-images-1.medium.com/max/2000/1*KrfOi7vg-5Dz-hGifK8ynA.gif) no-repeat center center;
-    height: 912px;
-    width: 1900px;
-    margin-left: auto;
-    margin-right: auto;
-    outline : 1px solid white;
-        font-size: 4em;
-    text-transform: uppercase;
-    font-weight: 700;
-         position: absolute;
-    text-align: center;
+background: #10111c url(https://cdn-images-1.medium.com/max/2000/1*KrfOi7vg-5Dz-hGifK8ynA.gif) no-repeat center center;
+height: 912px;
+width: 1900px;
+margin-left: auto;
+margin-right: auto;
+outline : 1px solid white;
+font-size: 4em;
+text-transform: uppercase;
+font-weight: 700;
+position: absolute;
+text-align: center;
 }
 
 .link {
-    color: #6b3850;
+color: #6b3850;
 }
 
 
-.link5,imgback2 p {
-	margin-top: 640px;
-    color: #b2b0a9;
+.link5,imgback2 p, imgback3 p {
+margin-top: 640px;
+color: #b2b0a9;
 }
 
 .link2{
 display: none;
-	margin-top: 640px;
-    color: #b2b0a9;
+margin-top: 640px;
+color: #b2b0a9;
 
 }
 .link3{
 display: none;
-	margin-top: 640px;
-    color: #b2b0a9;
+margin-top: 640px;
+color: #b2b0a9;
 }
 .link4{
 display: none;
-	margin-top: 640px;
-    color: #b2b0a9;
+margin-top: 640px;
+color: #b2b0a9;
 }
 .imgback2 {
-    background: #10111c url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73987572892175.5bf6c6f15f676.gif) no-repeat center center;
-    height: 912px;
-    width: 1900px;
-    margin-left: auto;
-    margin-right: auto;
-    outline : 1px solid white;
-    font-size: 4em;
-    text-transform: uppercase;
-    font-weight: 700;
-    position: absolute;
-    text-align: center;
-    display: none;
+background: #10111c url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73987572892175.5bf6c6f15f676.gif) no-repeat center center;
+height: 912px;
+width: 1900px;
+margin-left: auto;
+margin-right: auto;
+outline : 1px solid white;
+font-size: 4em;
+text-transform: uppercase;
+font-weight: 700;
+position: absolute;
+text-align: center;
+display: none;
 }
 
+.imgback3 {
+background: #10111c ; 
+height: 912px;
+width: 1900px;
+margin-left: auto;
+margin-right: auto;
+outline : 1px solid white;
+font-size: 4em;
+text-transform: uppercase;
+font-weight: 700;
+position: absolute;
+text-align: center;
+display: none;
+
+}
+
+.explication{
+
+color: #b2b0a9;
+
+}
+.regle{
+
+color: #b2b0a9;
+}
+.skip{
+color: #b2b0a9;
+}
