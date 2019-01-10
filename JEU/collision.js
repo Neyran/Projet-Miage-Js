@@ -1,21 +1,21 @@
 
 function drawMenu() {
-if(play==0) {
-if(score1>score2) { 
-  document.querySelector('.link2').style= 'display:block;'
+  if(play==0) {
+    if(score1>score2) { 
+      document.querySelector('.link2').style= 'display:block;'
       stopCount()
-}
-if(score1<score2) {
-   document.querySelector('.link3').style= 'display:block;'
-      stopCount()
-}
+    }
+    if(score1<score2) {
+       document.querySelector('.link3').style= 'display:block;'
+       stopCount()
+    }
 
-if(score1 == score2) {
-   document.querySelector('.link4').style= 'display:block;'
-      stopCount()
-}
-      document.querySelector('.imgback2').style= 'display:block;'
-}
+    if(score1 == score2) {
+       document.querySelector('.link4').style= 'display:block;'
+       stopCount()
+    }
+     document.querySelector('.imgback2').style= 'display:block;'
+  }
 }
 
 
@@ -77,7 +77,7 @@ function collisionDetection() {
           if (collisionLeft2 && collisionRight2 && collisionTop2 && collisionBottom2) //collision balle 2
           {
           score2++;
-          b.status = 4;
+          b.status = 6;
           mySound2.play();
           }
         }
