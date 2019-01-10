@@ -14,8 +14,6 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 
 
 ## **A coder :**
-
-- Menu explicatif des touches (Manque de temps avec les partiels de la semaine..)
 - Load des images (Manque de temps avec les partiels de la semaine..)
 - Ajouts de d'autres options possibles et ajustements de quelques détails (Manque de temps avec les partiels de la semaine..)
 
@@ -35,6 +33,7 @@ Nous avons changé de projet en cour de route et nous sommes partie sur un jeu d
 - Perfectionner le Menu
 - Design a refaire
 - Son
+- Menu explicatif des touches
 -Hebergement sur le site d'un ami qui a bien voulu nous aider -> http://www.samuelcavaco.fr/JEU/jeu.html
 
 ## **Deux versions du code sont disponibles (nous somme a la recherche de la meilleure manière de gérer les collisions).** 
