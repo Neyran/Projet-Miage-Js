@@ -1,12 +1,12 @@
 # Changement de projet.. 
 
-Nous avons changé de projet en cour de route et nous sommes partie sur un jeu de plateforme. Ce sont des aliens a la conquête d'une planète. Arrivé sur place ils s'affrontent pour savoir a qui va appartenir la terre nouvelle. Ils vont devoir recolter le plus de zone Jaune et de grosses étoiles en évitant les obstacles mallus et en profitant des étoiles bonus. Tout cela dans une certaine limite de temp. 
+Nous avons changé de projet en cours de route et nous sommes partis sur un jeu de plateforme. Ce sont des aliens à la conquête d'une planète. Arrivés sur place, ils s'affrontent pour savoir à qui va appartenir la terre nouvelle. Ils vont devoir récolter le plus de zone Jaune et de grosses étoiles en évitant les obstacles mallus et en profitant des étoiles bonus. Tout cela dans une certaine limite de temps. 
 
 
 
 ## **A coder :**
 - Load des images (Manque de temps avec les partiels de la semaine..)
-- Ajouts de d'autres options possibles et ajustements de quelques détails (Manque de temps avec les partiels de la semaine..)
+- Ajouts d'autres options possibles et ajustements de quelques détails (Manque de temps avec les partiels de la semaine..)
 
 
 
