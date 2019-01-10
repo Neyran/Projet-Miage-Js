@@ -68,11 +68,11 @@ update() {
 
               if (b.status == 1 || b.status == 2 ) {
 
-                if (collisionLeft3 && collisionRight3 && collisionTop3 && collisionBottom3){
+              if (collisionLeft3 && collisionRight3 && collisionTop3 && collisionBottom3){
                    this.vx *= -1;
                    this.vy *= -1;
 /*
-                if(collisionLeft3) {
+if(collisionLeft3) {
   this.x = b.x - this.size/2;
   this.vx *= -1;
 }
