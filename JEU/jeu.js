@@ -4,15 +4,15 @@ window.onload = function () {
     hc = canvas.height;
     ctx = canvas.getContext("2d");
     video = document.getElementById('sourcevid');
-      mySound = new sound("https://lasonotheque.org/UPLOAD/mp3/0564.mp3");
-     mySound2 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/RewardSo-Mark_E_B-8078/RewardSo-Mark_E_B-8078_hifi.mp3");
-      mySound3 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/PowerUp-Mark_E_B-8070/PowerUp-Mark_E_B-8070_hifi.mp3");
-mySound4 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/SpaceShi-Mark_E_B-7845/SpaceShi-Mark_E_B-7845_hifi.mp3");
-mySound5 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/SineySpa-Mark_E_B-7844/SineySpa-Mark_E_B-7844_hifi.mp3");
-mySound6 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/ToySpace-Mark_E_B-7846/ToySpace-Mark_E_B-7846_hifi.mp3");
-mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/Arcade_S-wwwbeat-8530/Arcade_S-wwwbeat-8530_hifi.mp3");
+    mySound = new sound("https://lasonotheque.org/UPLOAD/mp3/0564.mp3");
+    mySound2 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/RewardSo-Mark_E_B-8078/RewardSo-Mark_E_B-8078_hifi.mp3");
+    mySound3 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/PowerUp-Mark_E_B-8070/PowerUp-Mark_E_B-8070_hifi.mp3");
+    mySound4 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/SpaceShi-Mark_E_B-7845/SpaceShi-Mark_E_B-7845_hifi.mp3");
+    mySound5 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/SineySpa-Mark_E_B-7844/SineySpa-Mark_E_B-7844_hifi.mp3");
+    mySound6 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/ToySpace-Mark_E_B-7846/ToySpace-Mark_E_B-7846_hifi.mp3");
+    mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Electronic/Arcade/Arcade_S-wwwbeat-8530/Arcade_S-wwwbeat-8530_hifi.mp3");
 
-      mySound8 = new sound("https://ia801309.us.archive.org/34/items/auboutdufil-archives/497/Jaunter-Reset.mp3");
+    mySound8 = new sound("https://ia801309.us.archive.org/34/items/auboutdufil-archives/497/Jaunter-Reset.mp3");
     document.addEventListener("keydown", downKeyHandler);
     document.addEventListener("keyup", upKeyHandler);
 	  img1 = new Image(); //mur 1
@@ -20,7 +20,7 @@ mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Elect
 	  img3 = new Image(); //mur 2 
     img4 = new Image(); //mur3
     img5 = new Image(); //mur4
-    img6 = new Image(); //Mur5 Point de respaw
+    img7 = new Image();
 
 /////////////////////
 
@@ -33,7 +33,6 @@ mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Elect
   img2.onload = function() {
   }
   img2.src = "https://cdn.shopify.com/s/files/1/1251/6453/products/1AMonster_1024x1024.png?v=1505293561"; //balle
-
   img3.onload = function() {
   }
   img3.src = "https://zupimages.net/up/19/02/ne6v.png"; //mur 2 
@@ -45,10 +44,14 @@ mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Elect
    img5.onload = function() {
   }
   img5.src = "https://zupimages.net/up/19/02/ww3c.png"; //mur 5 ancienne zone de point
-  
+/*  
   img6.onload = function() {
   }
   img6.src = "https://zupimages.net/up/19/02/ww3c.png"; //mur 6 Zone de respaw
+*/
+  img7.onload = function() {
+  }
+  img7.src = "https://zupimages.net/up/19/02/4n9r.png"; //mur 6 Zone de respaw
 
 
  //création des balles
@@ -60,7 +63,7 @@ mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Elect
   bigStar.push(new Etoile(1045, 52, 20, 'yellow')); 
   teleStar.push(new Etoile(790, 247, 10, 'white')); //teleportation
   //teleStar.push(new Etoile(1100, 200, 10, '#F5F5DC'));
-   // teleStar.push(new Etoile(1650, 290, 10, '#F5F5DC'));
+  // teleStar.push(new Etoile(1650, 290, 10, '#F5F5DC'));
 
   etoiles.push(new Etoile(1652, 150, 10, 'violet')); // violetbleu
   bigStar.push(new Etoile(1652, 15, 20, 'yellow')); 
@@ -99,15 +102,15 @@ mySound7 = new sound("http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Elect
 
 
                         //x,y,taille,couleur
-    requestAnimationFrame(dessinerJeu);
+  requestAnimationFrame(dessinerJeu);
 };
 
-          function addShadows() {
-            ctx.shadowColor = "black";    // color
-            ctx.shadowBlur = 15;         // blur level
-            ctx.shadowOffsetX = 2;      // horizontal offset
-            ctx.shadowOffsetY = 2;      // vertical offset
-          }
+  function addShadows() {
+    ctx.shadowColor = "black";    // color
+    ctx.shadowBlur = 15;         // blur level
+    ctx.shadowOffsetX = 2;      // horizontal offset
+    ctx.shadowOffsetY = 2;      // vertical offset
+  }
 
 //On construit les balles
 class Balle {
@@ -124,7 +127,7 @@ class Balle {
         ctx.save();
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.rad ,0,2*Math.PI);
-         addShadows();
+        addShadows();
         ctx.stroke();
 		    ctx.fill();
         ctx.clip();
@@ -148,7 +151,8 @@ let keyInput = {
   "KeyD": false,
   "KeyW": false,
   "KeyS": false,
-  "Space":false
+  "Space":false,
+  "Enter":false
 };
 function downKeyHandler(event){
   if(keyInput.hasOwnProperty(event.code))
@@ -191,10 +195,14 @@ function checkKey(keyInput) {
         vY2 = vit2;
 
     ////PLAY
+    if(keyInput.Enter){
+document.querySelector('.imgback3').style= 'display:block;'
+    document.querySelector('.imgback').style= 'display:none;'
+    }
    if(keyInput.Space){
     
     //document.querySelector('.imgback2').style= 'display:block;'
-    document.querySelector('.imgback').style= 'display:none;'
+    document.querySelector('.imgback3').style= 'display:none;'
 
    	if(play==2){
       startCount();
@@ -262,15 +270,16 @@ function sound(src) {
     this.sound.style.display = "none";
     document.body.appendChild(this.sound);
     this.play = function(){
-        this.sound.play();
+    this.sound.play();
     }
     this.stop = function(){
-        this.sound.pause();
+    this.sound.pause();
     }    
 }
 
 function dessinerJeu() {
     ctx.clearRect(0, 0, lc, hc);
+    drawBricks2();
     drawShad();
     drawBricks();
     collisionDetection();
@@ -278,7 +287,7 @@ function dessinerJeu() {
     balle2.draw(ctx);
     star();
     checkKey(keyInput);
-	drawScore();
+    drawScore();
     drawMenu();
     mySound8.play();
     requestAnimationFrame(dessinerJeu);
