@@ -1,7 +1,7 @@
 let canvas, ctx, balle;
 let hc;
 let lc;
-let img1,img2,img3,img4,img5,img6;
+let img1,img2,img3,img4,img5,img7;
 let score1 = 0;
 let score2 = 0;
 let ballRadius = 10;
@@ -33,13 +33,13 @@ let bricks = [
 [{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1},{status: 1 }],
 [{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1},{status: 1 }],
 [{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 2 },{status: 0 },{status: 0 },{status: 2 },{status: 2 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1},{status: 1 }],
-[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 0 },{status: 2 },{status: 0 },{status: 2 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1},{status: 1 }],
-[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 2 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1},{status: 1 }],
+[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 0 },{status: 2 },{status: 2 },{status: 2 },{status: 2 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1},{status: 1 }],
+[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 2 },{status: 2 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1},{status: 1 }],
 [{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1},{status: 1 }],
-[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 3 },{status: 3 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 2 },{status: 0 },{status: 1 },{status: 0 },{status: 1},{status: 1 }], // sur cette ligne les 3 sont des rouges
-[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 3 },{status: 3 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0},{status: 1 }], // sur cette ligne les 3 sont des rouges
-[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 0 },{status: 0 },{status: 3 },{status: 3 },{status: 3 },{status: 3 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 2 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0},{status: 1 }], // sur cette ligne les 3 sont des rouges
-[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 3 },{status: 3 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 2 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0},{status: 1 }], // sur cette ligne les 3 sont des rouges
+[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 2 },{status: 0 },{status: 1 },{status: 0 },{status: 1},{status: 1 }], // sur cette ligne les 3 sont des rouges
+[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0},{status: 1 }], // sur cette ligne les 3 sont des rouges
+[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 2 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0},{status: 1 }], // sur cette ligne les 3 sont des rouges
+[{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 2 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0},{status: 1 }], // sur cette ligne les 3 sont des rouges
 [{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 2 },{status: 2 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0},{status: 1 }],
 [{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0},{status: 1 }],
 [{status: 1 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 0 },{status: 1 },{status: 0 },{status: 2 },{status: 0 },{status: 1 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 0 },{status: 2 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0 },{status: 1 },{status: 1 },{status: 1 },{status: 0 },{status: 0},{status: 1 }],
@@ -56,15 +56,13 @@ let bricks = [
 function drawBricks() {
   for(let c=0; c<brickColumnCount; c++) {
     for(let r=0; r<brickRowCount; r++) {
-        if(bricks[c][r].status == 1 || bricks[c][r].status == 2 || bricks[c][r].status == 3 || bricks[c][r].status == 4 || bricks[c][r].status == 5) {
+        if(bricks[c][r].status == 1 || bricks[c][r].status == 2) {
         let brickX = (r*(brickWidth))+brickOffsetLeft;
         let brickY = (c*(brickHeight))+brickOffsetTop;
         bricks[c][r].x = brickX;
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        // addShadows();
-     //  ctx.stroke();
         ctx.fill();
         ctx.save();
         ctx.clip();
@@ -76,15 +74,46 @@ function drawBricks() {
             case 2 :
                     ctx.drawImage(img3, 0, 0, 1900, 912);
                     break;
+            default:
+           
+                    ctx.drawImage(img1, 0, 0, 1900, 912);
+                    break;
+        }
+        ctx.restore();
+        ctx.closePath();
+
+       }
+    }
+  }
+}
+function drawBricks2() {
+  for(let c=0; c<brickColumnCount; c++) {
+    for(let r=0; r<brickRowCount; r++) {
+        if(bricks[c][r].status == 3 || bricks[c][r].status == 4 || bricks[c][r].status == 5|| bricks[c][r].status == 6) {
+        let brickX = (r*(brickWidth))+brickOffsetLeft;
+        let brickY = (c*(brickHeight))+brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fill();
+        ctx.save();
+        ctx.clip();
+            switch (bricks[c][r].status) {
             case 3 :
                     ctx.drawImage(img4, 0, 0, 1900, 912);
                     break;
             case 4 :
                     ctx.drawImage(img5, 0, 0, 1900, 912);
                     break;
-            case 5 :
+           /* case 5 :
                     ctx.drawImage(img6, 0, 0, 1900, 912);
+                    break;*/
+            case 6 :
+                    ctx.drawImage(img7, 0, 0, 1900, 912);
                     break;
+
             default:
            
                     ctx.drawImage(img1, 0, 0, 1900, 912);
@@ -117,3 +146,4 @@ function drawShad() {
   }
  }
 }
+
